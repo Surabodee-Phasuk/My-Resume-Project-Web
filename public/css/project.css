@@ -1,0 +1,32 @@
+/* ===== Image Container ===== */
+.image-container {
+  width: 60%;
+  height: 400px;              
+  padding: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* รูปภาพ: บังคับให้ใช้ object-fit: contain เพื่อไม่ให้ภาพถูกซูมและตัดขอบ */
+.image-container img {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  /* 🛑 แก้ไขตรงนี้: เพิ่ม !important หรือใช้ Selector ที่เฉพาะเจาะจงกว่า */
+  object-fit: contain !important; 
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .card .d-flex {
+    flex-direction: column;
+  }
+
+  .image-container {
+    width: 100%;
+    height: 250px; 
+    margin-top: 1rem;
+  }
+}
