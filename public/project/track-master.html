@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>My Profile</title>
+    <title>Track Master - Project Details</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap"
@@ -24,14 +24,18 @@
     <link href="../css/project.css" rel="stylesheet" />
   </head>
 
-  <body class="d-flex flex-column h-100 bg-light">
-    <main class="flex-shrink-0">
+  <body class="d-flex flex-column h-100 bg-light en"> <main class="flex-shrink-0">
 
       <nav class="navbar navbar-expand-lg border-bottom">
         <div class="container">
           <a class="navbar-brand fw-bold" href="../index.html">
-            ← Back to Home
+            <span class="lang-en">← Back to Home</span>
+            <span class="lang-th">← กลับหน้าหลัก</span>
           </a>
+          
+           <div class="ms-auto d-flex align-items-center">
+            <button id="lang-toggle" class="btn btn-outline-dark btn-sm fw-bold" style="width: 45px;">TH</button>
+          </div>
         </div>
       </nav>
 
@@ -42,7 +46,12 @@
               <span class="text-gradient d-inline">Track Master</span>
             </h1>
             <p class="lead text-muted mt-3">
-              เป็นโปรเจกต์แรกที่ทำร่วมกับทีมโดยจะเน้นในเรื่องของการจัดจาก database ของข้อมูลระบบติดตามพัสดุที่นำเข้าไม่ใช้ระบบที่สมบูรณ์แบบ
+              <span class="lang-en">
+                My first team project, focusing on database management for an imported parcel tracking system (prototype).
+              </span>
+              <span class="lang-th">
+                เป็นโปรเจกต์แรกที่ทำร่วมกับทีมโดยจะเน้นในเรื่องของการจัดการ database ของข้อมูลระบบติดตามพัสดุที่นำเข้า (ไม่ใช่ระบบที่สมบูรณ์)
+              </span>
             </p>
           </div>
 
@@ -57,15 +66,20 @@
                   </a>
                 </div>
 
-                <!--card1-->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">Login</h5>
-                          <p class="small text-muted mb-0">หากผู้ใช้ต้องการเข้าสู่ระบบโดยที่ยังไม่ได้ล็อกอิน ระบบจะแสดงหน้าต่าง pop up สำหรับการเข้าสู่ระบบโดยอัตโนมัติผู้ใช้สามารถเลือกเข้าสู่ระบบผ่านบัญชีGmail, Facebook หรือ Apple ID ได้หรือหากยังไม่มีบัญชีผู้ใช้งานสามารถลงทะเบียนผู้
-                          ใช้งาน (Sign up) เพื่อสมัครสมาชิก โดยระบบจะแสดงหน้าต่าง pop up สำหรับการกรอกข้อมูลสมัครใช้งานเว็บไซต์</p>
+                          <p class="small text-muted mb-0">
+                            <span class="lang-en">
+                              If the user is not logged in, a pop-up window will appear automatically. Users can choose to log in via Gmail, Facebook, or Apple ID. If they don't have an account, they can sign up through a registration pop-up.
+                            </span>
+                            <span class="lang-th">
+                              หากผู้ใช้ต้องการเข้าสู่ระบบโดยที่ยังไม่ได้ล็อกอิน ระบบจะแสดงหน้าต่าง pop up สำหรับการเข้าสู่ระบบโดยอัตโนมัติ ผู้ใช้สามารถเลือกเข้าสู่ระบบผ่านบัญชี Gmail, Facebook หรือ Apple ID ได้ หรือหากยังไม่มีบัญชีผู้ใช้งานสามารถลงทะเบียนผู้ใช้งาน (Sign up) เพื่อสมัครสมาชิก โดยระบบจะแสดงหน้าต่าง pop up สำหรับการกรอกข้อมูลสมัครใช้งานเว็บไซต์
+                            </span>
+                          </p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
@@ -79,14 +93,20 @@
                   </div>
                 </div>
 
-                <!--card2-->               
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">Home</h5>
-                          <p class="small text-muted mb-0">หน้าต่าง Search เลขพัสดุเพียงแค่ผู้ใช้กรอกเลขพัสดุให้ครบถ้วนแล้วกด Track เพื่อค้นหาพัสดุ</p>
+                          <p class="small text-muted mb-0">
+                            <span class="lang-en">
+                                Parcel tracking search page. Users simply enter the complete parcel number and press "Track" to find their parcel.
+                            </span>
+                            <span class="lang-th">
+                                หน้าต่าง Search เลขพัสดุเพียงแค่ผู้ใช้กรอกเลขพัสดุให้ครบถ้วนแล้วกด Track เพื่อค้นหาพัสดุ
+                            </span>
+                          </p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
@@ -100,14 +120,20 @@
                   </div>
                 </div>
 
-                <!--card3-->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">Orders</h5>
-                          <p class="small text-muted mb-0">หน้าต่างที่แสดง pop up เพื่อกรอกข้อมูลในการส่งพัสดุโดย pop up จะแสดงช่องกรอก เบอร์โทรของผู้รับพัสดุ, ชื่อของผู้รับพัสดุ, อยู่ของผู้รับสินค้า, น้ำหนักของพัสดุ</p>
+                          <p class="small text-muted mb-0">
+                            <span class="lang-en">
+                                A pop-up window for entering parcel delivery details, including fields for recipient's phone number, name, address, and parcel weight.
+                            </span>
+                            <span class="lang-th">
+                                หน้าต่างที่แสดง pop up เพื่อกรอกข้อมูลในการส่งพัสดุโดย pop up จะแสดงช่องกรอก เบอร์โทรของผู้รับพัสดุ, ชื่อของผู้รับพัสดุ, ที่อยู่ของผู้รับสินค้า, น้ำหนักของพัสดุ
+                            </span>
+                          </p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
@@ -121,63 +147,81 @@
                   </div>
                 </div>
 
-                <!--card4-->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">Payment</h5>
-                          <p class="small text-muted mb-0">หน้าต่างที่แสดงคิวอาร์โค้ดไว้สำหรับสแกนจ่ายค่าบริการการขนส่งสินค้าโดยมีเลขพัสดุตามข้อมูลพร้อมสามารถแนบไฟล์สลิปได้</p>
+                          <p class="small text-muted mb-0">
+                            <span class="lang-en">
+                                Displays a QR code for scanning to pay shipping fees, linked to the specific parcel ID. Users can also upload a payment slip for verification.
+                            </span>
+                            <span class="lang-th">
+                                หน้าต่างที่แสดงคิวอาร์โค้ดไว้สำหรับสแกนจ่ายค่าบริการการขนส่งสินค้าโดยมีเลขพัสดุตามข้อมูลพร้อมสามารถแนบไฟล์สลิปได้
+                            </span>
+                          </p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
                           src="../picture/trackmaster/Track4.png"
-                          alt=""
+                          alt="Payment"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <!--card5-->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">Report</h5>
-                          <p class="small text-muted mb-0">ผู้ใช้สามารถใช้หน้าต่างนี้เพื่อรายงานปัญหาต่างๆ ที่เกิดขึ้นระหว่างการจัดส่ง รวมถึงกรณทีี่พัสดุชำรุดเสียหาย หรือไม่เป็นไปตามทระบุไว้</p>
+                          <p class="small text-muted mb-0">
+                            <span class="lang-en">
+                                Users can use this window to report various issues during delivery, including damaged parcels or items not matching their description.
+                            </span>
+                            <span class="lang-th">
+                                ผู้ใช้สามารถใช้หน้าต่างนี้เพื่อรายงานปัญหาต่างๆ ที่เกิดขึ้นระหว่างการจัดส่ง รวมถึงกรณีที่พัสดุชำรุดเสียหาย หรือไม่เป็นไปตามที่ระบุไว้
+                            </span>
+                          </p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
                           src="../picture/trackmaster/Track5.png"
-                          alt=""
+                          alt="Report"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <!--card6-->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">Account</h5>
-                          <p class="small text-muted mb-0">หน้าแสดงและแก้ไขรายละเอียดข้อมูลส่วนตัว เมื่อกดเข้าจะแสดงรายละเอียดดังนี้ รูปภาพ, ชื่อผู้พนักงาน , IDพนักงาน,เบอร์โทรศัพท์และมีปุ่มให้แก้ไขรายละเอียดข้อมูลส่วนตัว และปุ่มออกจากระบบ (Logout)</p>
+                          <p class="small text-muted mb-0">
+                            <span class="lang-en">
+                                Displays and allows editing of personal details. Shows profile picture, employee name, employee ID, and phone number. Includes buttons to edit profile and logout.
+                            </span>
+                            <span class="lang-th">
+                                หน้าแสดงและแก้ไขรายละเอียดข้อมูลส่วนตัว เมื่อกดเข้าจะแสดงรายละเอียดดังนี้ รูปภาพ, ชื่อพนักงาน , ID พนักงาน, เบอร์โทรศัพท์ และมีปุ่มให้แก้ไขรายละเอียดข้อมูลส่วนตัว และปุ่มออกจากระบบ (Logout)
+                            </span>
+                          </p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
                           src="../picture/trackmaster/Track6.png"
-                          alt=""
+                          alt="Account"
                         />
                       </div>
                     </div>
@@ -202,5 +246,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/scripts.js"></script>
   </body>
 </html>

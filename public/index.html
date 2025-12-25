@@ -1,35 +1,37 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>My Resume</title>
+    <title>Surabodee Phasuk - Resume</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!-- Bootstrap Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
       rel="stylesheet"
     />
-    <!-- Google Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body id="top">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg sticky-top border-bottom">
+  <body id="top" class="en"> <nav class="navbar navbar-expand-lg sticky-top border-bottom">
       <div class="container">
         <a class="navbar-brand fw-semibold" href="https://reg.tu.ac.th/">
-            <img src="picture/Tu.png" alt="TU Logo" width="28" height="28" class="me-2" />Thammasat University</a>
+          <img
+            src="picture/Tu.png"
+            alt="TU Logo"
+            width="28"
+            height="28"
+            class="me-2"
+          />Thammasat University
+        </a>
+        
         <button
           class="navbar-toggler"
           type="button"
@@ -38,35 +40,54 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="ms-auto d-flex align-items-center order-lg-last ms-lg-3 mt-3 mt-lg-0">
+            <button id="lang-toggle" class="btn btn-outline-dark btn-sm fw-bold" style="width: 45px;">TH</button>
+          </div>
+
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#about">About me</a>
+              <a class="nav-link" href="#about">
+                <span class="lang-en">About me</span>
+                <span class="lang-th">เกี่ยวกับฉัน</span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
+              <a class="nav-link" href="#skills">
+                <span class="lang-en">Skills</span>
+                <span class="lang-th">ทักษะ</span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#experience">Experience</a>
+              <a class="nav-link" href="#experience">
+                <span class="lang-en">Experience</span>
+                <span class="lang-th">ประสบการณ์</span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
+              <a class="nav-link" href="#projects">
+                <span class="lang-en">Projects</span>
+                <span class="lang-th">โปรเจกต์</span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#education">Education</a>
+              <a class="nav-link" href="#education">
+                <span class="lang-en">Education</span>
+                <span class="lang-th">การศึกษา</span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+              <a class="nav-link" href="#contact">
+                <span class="lang-en">Contact</span>
+                <span class="lang-th">ติดต่อ</span>
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- About -->
     <section id="about" class="section">
       <div class="container">
         <div class="row align-items-center gy-4">
@@ -79,14 +100,24 @@
           </div>
           <div class="col-md-8">
             <p class="text-uppercase text-muted mb-1">
-              My Resume &amp; Project Web
+              <span class="lang-en">My Resume &amp; Project Web</span>
+              <span class="lang-th">เรซูเม่และเว็บรวมผลงาน</span>
             </p>
-            <h1 class="fw-bold mb-2">Surabodee Phasuk</h1>
+            <h1 class="fw-bold mb-2">
+              <span class="lang-en">Surabodee Phasuk</span>
+              <span class="lang-th">สุรบดี ผาสุข</span>
+            </h1>
             <h5 class="text-primary mb-3">
-              Bachelor of Computer Science <br> Still Learning · Not an Expert (Yet!) & Not Stop Learning
+              <span class="lang-en">Bachelor of Computer Science <br> Still Learning · Not an Expert (Yet!) & Not Stop Learning</span>
+              <span class="lang-th">วิทยาการคอมพิวเตอร์ <br> กำลังศึกษา · พร้อมเรียนรู้สิ่งใหม่ตลอดเวลา</span>
             </h5>
             <p class="text-secondary mb-4">
-              I am 20 years old currently studying Computer Science at Thammasat University. I am confident that my abilities and programming skills will allow me to quickly integrate and contribute effectively to the company. I am also eager to continuously learn and apply new knowledge to support the team's growth and future success.
+              <span class="lang-en">
+                I am 20 years old currently studying Computer Science at Thammasat University. I am confident that my abilities and programming skills will allow me to quickly integrate and contribute effectively to the company. I am also eager to continuously learn and apply new knowledge to support the team's growth and future success.
+              </span>
+              <span class="lang-th">
+                ผมอายุ 20 ปี กำลังศึกษาสาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยธรรมศาสตร์ ผมมั่นใจว่าทักษะความสามารถด้านการเขียนโปรแกรมของผม จะช่วยให้ผมปรับตัวและทำงานร่วมกับบริษัทได้อย่างรวดเร็วและมีประสิทธิภาพ ผมมีความกระตือรือร้นที่จะเรียนรู้และนำความรู้ใหม่ๆ มาปรับใช้เพื่อสนับสนุนการเติบโตและความสำเร็จของทีมครับ
+              </span>
             </p>
             <div class="d-flex flex-wrap gap-2">
               <a href="https://github.com/Surabodee-Phasuk/My-Resume-Project-Web/blob/main/CV-6609650707.pdf" class="btn btn-dark">
@@ -94,7 +125,8 @@
               </a>
               <a href="#contact" class="btn btn-outline-dark">
                 <i class="bi bi-envelope me-1"></i>
-                ติดต่อฉัน
+                <span class="lang-en">Contact Me</span>
+                <span class="lang-th">ติดต่อฉัน</span>
               </a>
             </div>
           </div>
@@ -102,10 +134,12 @@
       </div>
     </section>
 
-    <!-- Skills -->
     <section id="skills" class="py-4">
       <div class="container">
-        <h2 class="section-title">ทักษะ (Skills)</h2>
+        <h2 class="section-title">
+            <span class="lang-en">Skills</span>
+            <span class="lang-th">ทักษะ (Skills)</span>
+        </h2>
         <div class="row g-4">
           <div class="col-md-6">
             <div class="card p-3">
@@ -121,7 +155,6 @@
                 <span class="badge-skill">Typescript</span>
                 <span class="badge-skill">SQL</span>
                 <span class="badge-skill">Python</span>
-
               </div>
             </div>
           </div>
@@ -135,7 +168,10 @@
               <div>
                 <span class="badge-skill">Gitlab / GitHub</span>
                 <span class="badge-skill">MySQL</span>
-                <span class="badge-skill">AWS (พื้นฐาน)</span>
+                <span class="badge-skill">
+                    <span class="lang-en">AWS (Basic)</span>
+                    <span class="lang-th">AWS (พื้นฐาน)</span>
+                </span>
                 <span class="badge-skill">Android Studio</span>
                 <span class="badge-skill">Figma / Canva</span>
                 <span class="badge-skill">Bootstrap</span>
@@ -147,25 +183,38 @@
       </div>
     </section>
 
-    <!-- Experience -->
     <section id="experience" class="py-4">
       <div class="container">
-        <h2 class="section-title">ประสบการณ์ (Experience)</h2>
+        <h2 class="section-title">
+            <span class="lang-en">Experience</span>
+            <span class="lang-th">ประสบการณ์ (Experience)</span>
+        </h2>
         <div class="row g-4">
           <div class="col-lg-6">
             <div class="card p-3">
               <h5 class="mb-1">My Project</h5>
               <p class="text-muted mb-2">
-                2023 - ปัจจุบัน · University
+                2023 - <span class="lang-en">Present</span><span class="lang-th">ปัจจุบัน</span> · University
               </p>
-              <p class="mb-2">
-                • พัฒนาเว็บสำหรับระบบติดตามพัสดุ / Lost &amp; Found<br />
-                • ทำโปรเจกต์ Sentiment Analysis ด้วย NLP วิเคราะห์รีวิวหนังสือภาษาอังกฤษ<br />
-                • สร้างเว็บด้วย HTML / CSS / JS และเชื่อมต่อฐานข้อมูล MySQL
-              </p>
+              <div class="mb-2">
+                <span class="lang-en">
+                    • Developed a web application for Parcel Tracking / Lost &amp; Found System<br />
+                    • Conducted Sentiment Analysis on English book reviews using NLP<br />
+                    • Built websites using HTML / CSS / JS and connected to MySQL database
+                </span>
+                <span class="lang-th">
+                    • พัฒนาเว็บสำหรับระบบติดตามพัสดุ / Lost &amp; Found<br />
+                    • ทำโปรเจกต์ Sentiment Analysis ด้วย NLP วิเคราะห์รีวิวหนังสือภาษาอังกฤษ<br />
+                    • สร้างเว็บด้วย HTML / CSS / JS และเชื่อมต่อฐานข้อมูล MySQL
+                </span>
+              </div>
               <p class="mb-0">
-                เน้นการเรียนรู้จากโปรเจกต์จริง ฝึกวางโครงสร้างระบบ ประยุกต์การเขียนโค้ดให้
-                maintain ได้ และทำงานเป็นทีมด้วย Git
+                <span class="lang-en">
+                    Focused on learning from real-world projects, system architecture planning, writing maintainable code, and team collaboration using Git.
+                </span>
+                <span class="lang-th">
+                    เน้นการเรียนรู้จากโปรเจกต์จริง ฝึกวางโครงสร้างระบบ ประยุกต์การเขียนโค้ดให้ maintain ได้ และทำงานเป็นทีมด้วย Git
+                </span>
               </p>
             </div>
           </div>
@@ -177,21 +226,24 @@
                 <h6 class="mb-0">Frontend Web (HTML/CSS/Bootstrap)</h6>
                 <small class="text-muted">2023</small>
                 <p class="mb-0 mt-1">
-                  เริ่มฝึกทำหน้าเว็บ responsive และปรับ UI/UX 
+                  <span class="lang-en">Started practicing responsive web design and UI/UX adjustments.</span>
+                  <span class="lang-th">เริ่มฝึกทำหน้าเว็บ responsive และปรับ UI/UX</span>
                 </p>
               </div>
               <div class="timeline-item mb-3">
                 <h6 class="mb-0">Backend &amp; Database</h6>
                 <small class="text-muted">2024 - 2025</small>
                 <p class="mb-0 mt-1">
-                  ลองใช้ MySQL, Node.js / Spring Boot (พื้นฐาน)
+                  <span class="lang-en">Experimented with MySQL, Node.js / Spring Boot (Basics).</span>
+                  <span class="lang-th">ลองใช้ MySQL, Node.js / Spring Boot (พื้นฐาน)</span>
                 </p>
               </div>
               <div class="timeline-item">
                 <h6 class="mb-0">Cloud &amp; Android Studio</h6>
                 <small class="text-muted">2025</small>
                 <p class="mb-0 mt-1">
-                  เรียนรู้การใช้ AWS เช่น EC2, S3, RDS, Lambda และ CloudFormation
+                  <span class="lang-en">Learned AWS services such as EC2, S3, RDS, Lambda, and CloudFormation.</span>
+                  <span class="lang-th">เรียนรู้การใช้ AWS เช่น EC2, S3, RDS, Lambda และ CloudFormation</span>
                 </p>
               </div>
             </div>
@@ -200,12 +252,13 @@
       </div>
     </section>
 
-    <!-- Projects -->
     <section id="projects" class="py-4">
       <div class="container">
-        <h2 class="section-title">โปรเจกต์ (Projects)</h2>
+        <h2 class="section-title">
+            <span class="lang-en">Projects</span>
+            <span class="lang-th">โปรเจกต์ (Projects)</span>
+        </h2>
         <div class="row g-4">
-          <!-- Project 1: Track Master -->
           <div class="col-md-6">
             <div class="card h-100 p-3">
               <h5 class="mb-1 text-dark fw-bold">Track Master</h5>
@@ -213,149 +266,205 @@
                 Logistics Web Application · HTML, CSS, JS, MySQL
               </p>
               <p class="mb-2">
-                เน้นในของการจัดจาก database ของข้อมูลระบบติดตามพัสดุที่นำเข้า
+                <span class="lang-en">Focused on database management for imported parcel tracking data.</span>
+                <span class="lang-th">เน้นในเรื่องของการจัดการ database ของข้อมูลระบบติดตามพัสดุที่นำเข้า</span>
               </p>
               <ul class="mb-2">
-                <li>มีหน้า Login / Register สำหรับลูกค้าและผู้ดูแล</li>
-                <li>จัดการข้อมูลพัสดุ รายงานยอดจัดส่ง และการชำระเงิน</li>
-                <li>ออกแบบ UI ให้ใช้งานง่ายและรองรับหลายอุปกรณ์</li>
+                <span class="lang-en">
+                    <li>Login/Register pages for customers and admins</li>
+                    <li>Parcel management, delivery reporting, and payment features</li>
+                    <li>Responsive UI design for various devices</li>
+                </span>
+                <span class="lang-th">
+                    <li>มีหน้า Login / Register สำหรับลูกค้าและผู้ดูแล</li>
+                    <li>จัดการข้อมูลพัสดุ รายงานยอดจัดส่ง และการชำระเงิน</li>
+                    <li>ออกแบบ UI ให้ใช้งานง่ายและรองรับหลายอุปกรณ์</li>
+                </span>
               </ul>
               <a href="project/track-master.html" class="text-decoration-none">
                 <i class="bi bi-link-45deg me-1"></i>
-                ดูโปรเจกต์ Track Master
+                <span class="lang-en">View Track Master</span>
+                <span class="lang-th">ดูโปรเจกต์ Track Master</span>
               </a>
             </div>
           </div>
 
-          <!-- Project 2: Lost & Found System -->
           <div class="col-md-6">
             <div class="card h-100 p-3">
-              <h5 class="mb-1 text-dark fw-bold">Lost &amp; Found System  <strong class="text-success"></strong></h5><!--(in progress)-->
+              <h5 class="mb-1 text-dark fw-bold">Lost &amp; Found System</h5>
               <p class="text-muted mb-2">
-                Web Application · HTML, CSS, JS, MySQL, linelift
+                Web Application · HTML, CSS, JS, MySQL, LINE LIFF
               </p>
               <p class="mb-2">
-                ระบบแจ้งของหายในมหาวิทยาลัย ที่ให้ผู้ใช้สามารถ “แจ้งของหาย”
-                หรือ “แจ้งพบของ” พร้อมแนบรูปภาพ และตรวจสอบสถานะได้โดยการใช้ aws cloud และ linelift เข้ามาจัดการในระบบ
+                <span class="lang-en">
+                    University lost & found system allowing users to report lost/found items with images. Integrates AWS Cloud and LINE LIFF.
+                </span>
+                <span class="lang-th">
+                    ระบบแจ้งของหายในมหาวิทยาลัย ที่ให้ผู้ใช้สามารถ “แจ้งของหาย” หรือ “แจ้งพบของ” พร้อมแนบรูปภาพ และตรวจสอบสถานะได้โดยการใช้ AWS Cloud และ LINE LIFF
+                </span>
               </p>
               <ul class="mb-2">
-                <li>เชื่อมต่อฐานข้อมูล Dynamodb เก็บข้อมูลสิ่งของที่รับเรื่องเข้ามา</li>
-                <li>ออกแบบ UX ให้ใช้งานง่าย พร้อมหน้า form สำหรับกรอกข้อมูลที่เชื่อมเข้ากับ linelift</li>
+                <span class="lang-en">
+                    <li>Connected to DynamoDB to store item reports</li>
+                    <li>User-friendly UX with forms integrated into LINE LIFF</li>
+                </span>
+                <span class="lang-th">
+                    <li>เชื่อมต่อฐานข้อมูล DynamoDB เก็บข้อมูลสิ่งของที่รับเรื่องเข้ามา</li>
+                    <li>ออกแบบ UX ให้ใช้งานง่าย พร้อมหน้า form สำหรับกรอกข้อมูลที่เชื่อมเข้ากับ LINE LIFF</li>
+                </span>
               </ul>
               <a href="project/lost-found.html" class="text-decoration-none">
                 <i class="bi bi-link-45deg me-1"></i>
-                ดูโปรเจกต์ Lost &amp; Found
+                <span class="lang-en">View Lost &amp; Found</span>
+                <span class="lang-th">ดูโปรเจกต์ Lost &amp; Found</span>
               </a>
             </div>
           </div>
 
-          <!-- Project 3: LINE Chatbot แจ้งคนหาย -->
           <div class="col-md-6">
             <div class="card h-100 p-3">
               <h5 class="mb-1 text-dark fw-bold">
-                LINE Chatbot แจ้งคนหาย (AWS Cloud)
+                <span class="lang-en">Missing Person LINE Chatbot (AWS)</span>
+                <span class="lang-th">LINE Chatbot แจ้งคนหาย (AWS Cloud)</span>
               </h5>
               <p class="text-muted mb-2">
                 Chatbot · LINE Messaging API, AWS Lambda, API Gateway, DynamoDB
               </p>
               <p class="mb-2">
-                พัฒนา LINE Official Account สำหรับช่วยแจ้ง “คนหาย”
-                ผู้ใช้สามารถส่งรูป ข้อมูล และตำแหน่งที่พบได้
-                ระบบจะบันทึกข้อมูลลงฐานข้อมูลบน AWS และส่งต่อให้เจ้าหน้าที่ตรวจสอบ
+                <span class="lang-en">
+                    Developed a LINE OA to help report missing persons. Users can send photos, info, and location. Data is stored on AWS for officials to review.
+                </span>
+                <span class="lang-th">
+                    พัฒนา LINE Official Account สำหรับช่วยแจ้ง “คนหาย” ผู้ใช้สามารถส่งรูป ข้อมูล และตำแหน่งที่พบได้ ระบบจะบันทึกข้อมูลลงฐานข้อมูลบน AWS และส่งต่อให้เจ้าหน้าที่ตรวจสอบ
+                </span>
               </p>
               <ul class="mb-2">
-                <li>ออกแบบ conversation flow และปุ่ม Rich Menu / Quick Reply</li>
-                <li>ใช้ AWS Lambda + API Gateway รับ webhook จาก LINE</li>
-                <li>เก็บข้อมูลผู้แจ้งและรายละเอียดเคสใน DynamoDB / S3</li>
-                <li>ออกแบบสถาปัตยกรรมให้เป็น serverless ลดค่าใช้จ่ายและดูแลง่าย</li>
+                <span class="lang-en">
+                    <li>Designed conversation flow and Rich Menu / Quick Reply buttons</li>
+                    <li>Used AWS Lambda + API Gateway to handle LINE webhooks</li>
+                    <li>Stored reporter data and case details in DynamoDB / S3</li>
+                    <li>Serverless architecture design for cost efficiency and ease of maintenance</li>
+                </span>
+                <span class="lang-th">
+                    <li>ออกแบบ conversation flow และปุ่ม Rich Menu / Quick Reply</li>
+                    <li>ใช้ AWS Lambda + API Gateway รับ webhook จาก LINE</li>
+                    <li>เก็บข้อมูลผู้แจ้งและรายละเอียดเคสใน DynamoDB / S3</li>
+                    <li>ออกแบบสถาปัตยกรรมให้เป็น serverless ลดค่าใช้จ่ายและดูแลง่าย</li>
+                </span>
               </ul>
               <a href="project/line-chatbot.html" class="text-decoration-none">
                 <i class="bi bi-link-45deg me-1"></i>
-                ดูโปรเจกต์ Line Chatbot แจ้งคนหาย
+                <span class="lang-en">View LINE Chatbot</span>
+                <span class="lang-th">ดูโปรเจกต์ Line Chatbot แจ้งคนหาย</span>
               </a>
             </div>
           </div>
 
-          <!-- Project 4: Maze Generating Algorithm -->
           <div class="col-md-6">
             <div class="card h-100 p-3">
-              <h5 class="mb-1 text-dark fw-bold">Maze Generating Algorithm <strong class="text-success"></strong></h5><!--(in progress)-->
+              <h5 class="mb-1 text-dark fw-bold">Maze Generating Algorithm</h5>
               <p class="text-muted mb-2">
                 Algorithm Visualization · C / Python
               </p>
               <p class="mb-2">
-                โปรแกรมสร้างเขาวงกต (Maze) แบบสุ่มโดยใช้การเดินแบบ
-                Depth-First Search (DFS)
-                และสามารถแสดงภาพการสร้างเส้นทางทีละขั้นตอนแบบ Visualization
+                <span class="lang-en">
+                    Random maze generation program using Depth-First Search (DFS) with step-by-step visualization.
+                </span>
+                <span class="lang-th">
+                    โปรแกรมสร้างเขาวงกต (Maze) แบบสุ่มโดยใช้การเดินแบบ Depth-First Search (DFS) และสามารถแสดงภาพการสร้างเส้นทางทีละขั้นตอนแบบ Visualization
+                </span>
               </p>
               <ul class="mb-2">
-                <li>ใช้โครงสร้างข้อมูล Stack ในการสำรวจเส้นทาง</li>
-                <li>รองรับการสร้างขนาดเขาวงกตแบบกำหนดเอง (NxN)</li>
-                <li>มีระบบแสดงผลเป็นกราฟิกในคอนโซล / Pygame</li>
-                <li>ต่อยอดเป็น Maze Solver ได้ในอนาคต</li>
+                <span class="lang-en">
+                    <li>Used Stack data structure for path exploration</li>
+                    <li>Supports custom maze sizes (NxN)</li>
+                    <li>Graphical visualization in console / Pygame</li>
+                    <li>Future extension: Maze Solver</li>
+                </span>
+                <span class="lang-th">
+                    <li>ใช้โครงสร้างข้อมูล Stack ในการสำรวจเส้นทาง</li>
+                    <li>รองรับการสร้างขนาดเขาวงกตแบบกำหนดเอง (NxN)</li>
+                    <li>มีระบบแสดงผลเป็นกราฟิกในคอนโซล / Pygame</li>
+                    <li>ต่อยอดเป็น Maze Solver ได้ในอนาคต</li>
+                </span>
               </ul>
               <a href="project/maze-algorithm.html" class="text-decoration-none">
                 <i class="bi bi-link-45deg me-1"></i>
-                ดูโปรเจกต์ Maze Generating Algorithm
+                <span class="lang-en">View Maze Algorithm</span>
+                <span class="lang-th">ดูโปรเจกต์ Maze Generating Algorithm</span>
               </a>
             </div>
           </div>
 
-          <!-- Project 5: Mu Kratha Master -->
           <div class="col-md-6">
             <div class="card h-100 p-3">
               <h5 class="mb-1 text-dark fw-bold">
-                Mu Kratha Master – เกมหมูกระทะทำคะแนน <strong class="text-success"></strong><!--(in progress)-->
+                <span class="lang-en">Mu Kratha Master – BBQ Game</span>
+                <span class="lang-th">Mu Kratha Master – เกมหมูกระทะทำคะแนน</span>
               </h5>
               <p class="text-muted mb-2">
                 Android Game · Java, Android Studio, AnimationDrawable
               </p>
               <p class="mb-2">
-                เกมจำลองการย่างหมูกระทะ ผู้เล่นต้องพลิกหมูให้สุกพอดีภายในเวลาที่กำหนด
-                เพื่อทำคะแนนสูงสุด โดยใช้แอนิเมชันแบบ Frame Animation และระบบจับเวลา
+                <span class="lang-en">
+                    Thai BBQ simulation game. Players must flip meat at the right time to score points using Frame Animation and a timer system.
+                </span>
+                <span class="lang-th">
+                    เกมจำลองการย่างหมูกระทะ ผู้เล่นต้องพลิกหมูให้สุกพอดีภายในเวลาที่กำหนด เพื่อทำคะแนนสูงสุด โดยใช้แอนิเมชันแบบ Frame Animation และระบบจับเวลา
+                </span>
               </p>
               <ul class="mb-2">
-                <li>
-                  ใช้ <strong>AnimationDrawable</strong>
-                  แสดงภาพการย่างหมูทีละเฟรม
-                </li>
-                <li>เพิ่มระบบ <strong>Timer</strong> และคะแนน (Scoring System)</li>
-                <li>
-                  ออกแบบ UI ด้วย ConstraintLayout และ Asset ภาพสไตล์ญี่ปุ่น
-                </li>
-                <li>รองรับการเล่นบนมือถือ Android ทุกขนาดหน้าจอ</li>
+                <span class="lang-en">
+                    <li>Used <strong>AnimationDrawable</strong> for frame-by-frame grilling animation</li>
+                    <li>Implemented <strong>Timer</strong> and Scoring System</li>
+                    <li>Designed UI with ConstraintLayout and Japanese-style assets</li>
+                    <li>Responsive for all Android screen sizes</li>
+                </span>
+                <span class="lang-th">
+                    <li>ใช้ <strong>AnimationDrawable</strong> แสดงภาพการย่างหมูทีละเฟรม</li>
+                    <li>เพิ่มระบบ <strong>Timer</strong> และคะแนน (Scoring System)</li>
+                    <li>ออกแบบ UI ด้วย ConstraintLayout และ Asset ภาพสไตล์ญี่ปุ่น</li>
+                    <li>รองรับการเล่นบนมือถือ Android ทุกขนาดหน้าจอ</li>
+                </span>
               </ul>
               <a href="project/mu-kratha-master.html" class="text-decoration-none">
                 <i class="bi bi-link-45deg me-1"></i>
-                ดูโปรเจกต์ Mu Kratha Master
+                <span class="lang-en">View Mu Kratha Master</span>
+                <span class="lang-th">ดูโปรเจกต์ Mu Kratha Master</span>
               </a>
             </div>
           </div>
 
-          <!-- Project 6: Book Review Sentiment Analysis -->
           <div class="col-md-6">
             <div class="card h-100 p-3">
-              <h5 class="mb-1 text-dark fw-bold">
-                Book Review Sentiment Analysis <strong class="text-success"></strong> <!--(in progress)-->
-              </h5>
+              <h5 class="mb-1 text-dark fw-bold">Book Review Sentiment Analysis</h5>
               <p class="text-muted mb-2">
                 Machine Learning · Python, TensorFlow, NLP
               </p>
               <p class="mb-2">
-                โมเดล LSTM วิเคราะห์รีวิวหนังสือจาก Amazon Kindle
-                แยกรีวิวเป็นเชิงบวก/ลบ และสรุปผลออกมาในรูปแบบกราฟ
+                <span class="lang-en">
+                    LSTM model analyzing Amazon Kindle book reviews. Classifies reviews as positive/negative and visualizes results.
+                </span>
+                <span class="lang-th">
+                    โมเดล LSTM วิเคราะห์รีวิวหนังสือจาก Amazon Kindle แยกรีวิวเป็นเชิงบวก/ลบ และสรุปผลออกมาในรูปแบบกราฟ
+                </span>
               </p>
               <ul class="mb-2">
-                <li>
-                  ทำ Data Cleaning (lowercase, remove punctuation/number,
-                  stopwords)
-                </li>
-                <li>แปลง rating 1–5 เป็น binary class (บวก/ลบ)</li>
-                <li>เปรียบเทียบ LSTM กับ baseline model อื่น ๆ</li>
+                <span class="lang-en">
+                    <li>Data Cleaning (lowercase, remove punctuation/numbers, stopwords)</li>
+                    <li>Converted 1–5 ratings into binary classes (Positive/Negative)</li>
+                    <li>Compared LSTM performance with other baseline models</li>
+                </span>
+                <span class="lang-th">
+                    <li>ทำ Data Cleaning (lowercase, remove punctuation/number, stopwords)</li>
+                    <li>แปลง rating 1–5 เป็น binary class (บวก/ลบ)</li>
+                    <li>เปรียบเทียบ LSTM กับ baseline model อื่น ๆ</li>
+                </span>
               </ul>
               <a href="project/sentiment-analysis.html" class="text-decoration-none">
                 <i class="bi bi-link-45deg me-1"></i>
-                ดูโปรเจกต์ Book Review Sentiment Analysis
+                <span class="lang-en">View Sentiment Analysis</span>
+                <span class="lang-th">ดูโปรเจกต์ Book Review Sentiment Analysis</span>
               </a>
             </div>
           </div>
@@ -363,20 +472,26 @@
       </div>
     </section>
 
-    <!-- Education -->
     <section id="education" class="py-4">
       <div class="container">
-        <h2 class="section-title">การศึกษา (Education)</h2>
+        <h2 class="section-title">
+            <span class="lang-en">Education</span>
+            <span class="lang-th">การศึกษา (Education)</span>
+        </h2>
         <div class="row g-4">
           <div class="col-md-8">
             <div class="card p-3">
-              <h5 class="mb-1">ปริญญาตรี วิทยาการคอมพิวเตอร์</h5>
+              <h5 class="mb-1">
+                  <span class="lang-en">Bachelor of Computer Science</span>
+                  <span class="lang-th">ปริญญาตรี วิทยาการคอมพิวเตอร์</span>
+              </h5>
               <p class="text-muted mb-1">
-                มหาวิทยาลัยธรรมศาสตร์ · 2023 - ปัจจุบัน
+                <span class="lang-en">Thammasat University · 2023 - Present</span>
+                <span class="lang-th">มหาวิทยาลัยธรรมศาสตร์ · 2023 - ปัจจุบัน</span>
               </p>
               <p class="mb-2">
-                ตำแหน่งงานที่สนใจ: Software Engineering, Web front-end developer, Back-end developer,<br>
-                Full stack developer, UX/UI Designer
+                <span class="lang-en">Interested Positions: Software Engineering, Web Front-end Developer, Back-end Developer, Full Stack Developer, UX/UI Designer</span>
+                <span class="lang-th">ตำแหน่งงานที่สนใจ: Software Engineering, Web front-end developer, Back-end developer, Full stack developer, UX/UI Designer</span>
               </p>
             </div>
           </div>
@@ -384,102 +499,96 @@
       </div>
     </section>
 
-<!-- Contact -->
-<section id="contact" class="py-4 mb-4">
-  <div class="container">
-    <h2 class="section-title">ติดต่อฉัน (Contact)</h2>
-    <div class="row g-4">
-      <div class="col-md-6">
-        <div class="card p-3 h-100">
-          <h5 class="mb-3">ข้อมูลการติดต่อ</h5>
+    <section id="contact" class="py-4 mb-4">
+      <div class="container">
+        <h2 class="section-title">
+            <span class="lang-en">Contact</span>
+            <span class="lang-th">ติดต่อฉัน (Contact)</span>
+        </h2>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card p-3 h-100">
+              <h5 class="mb-3">
+                  <span class="lang-en">Contact Info</span>
+                  <span class="lang-th">ข้อมูลการติดต่อ</span>
+              </h5>
 
-          <!-- Email -->
-          <div class="d-flex align-items-center mb-3">
-            <div class="contact-icon me-3">
-              <i class="bi bi-envelope fs-5 text-primary"></i>
-            </div>
-            <div>
-              <div class="fw-semibold">Email</div>
-              <a href="mailto:surabodee.sitc@gmail.com" class="text-decoration-none">
-                surabodee.sitc@gmail.com
-              </a>
+              <div class="d-flex align-items-center mb-3">
+                <div class="contact-icon me-3">
+                  <i class="bi bi-envelope fs-5 text-primary"></i>
+                </div>
+                <div>
+                  <div class="fw-semibold">Email</div>
+                  <a href="mailto:surabodee.sitc@gmail.com" class="text-decoration-none">
+                    surabodee.sitc@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center mb-3">
+                <div class="contact-icon me-3">
+                  <i class="bi bi-telephone fs-5 text-success"></i>
+                </div>
+                <div>
+                  <div class="fw-semibold">
+                      <span class="lang-en">Phone</span>
+                      <span class="lang-th">เบอร์โทร</span>
+                  </div>
+                  <a href="tel:+66999999999" class="text-decoration-none">
+                    0915589501
+                  </a>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center mb-3">
+                <div class="contact-icon me-3">
+                  <i class="bi bi-github fs-5 text-dark"></i>
+                </div>
+                <div>
+                  <div class="fw-semibold">GitHub</div>
+                  <a href="https://github.com/Surabodee-Phasuk" target="_blank" class="text-decoration-none">
+                    Surabodee-Phasuk
+                  </a>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center mb-3">
+                <div class="contact-icon me-3">
+                  <i class="bi bi-linkedin fs-5 text-primary"></i>
+                </div>
+                <div>
+                  <div class="fw-semibold">LinkedIn</div>
+                  <a href="https://www.linkedin.com/in/surabodee-phasuk-ba63b7398/" target="_blank" class="text-decoration-none">
+                    Surabodee-Phasuk
+                  </a>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center">
+                <div class="contact-icon me-3">
+                  <i class="bi bi-instagram fs-5" style="color:#E1306C;"></i>
+                </div>
+                <div>
+                  <div class="fw-semibold">Instagram</div>
+                  <a href="https://www.instagram.com/_sprdee_/" target="_blank" class="text-decoration-none">
+                    @_sprdee_
+                  </a>
+                </div>
+              </div>
+
             </div>
           </div>
-
-          <!-- Phone -->
-          <div class="d-flex align-items-center mb-3">
-            <div class="contact-icon me-3">
-              <i class="bi bi-telephone fs-5 text-success"></i>
-            </div>
-            <div>
-              <div class="fw-semibold">เบอร์โทร</div>
-              <a href="tel:+66999999999" class="text-decoration-none">
-                0915589501
-              </a>
-            </div>
-          </div>
-
-          <!-- GitHub -->
-          <div class="d-flex align-items-center mb-3">
-            <div class="contact-icon me-3">
-              <i class="bi bi-github fs-5 text-dark"></i>
-            </div>
-            <div>
-              <div class="fw-semibold">GitHub</div>
-              <a href="https://github.com/Surabodee-Phasuk" target="_blank" class="text-decoration-none">
-                Surabodee-Phasuk
-              </a>
-            </div>
-          </div>
-
-          <!-- LinkedIn -->
-          <div class="d-flex align-items-center mb-3">
-            <div class="contact-icon me-3">
-              <i class="bi bi-linkedin fs-5 text-primary"></i>
-            </div>
-            <div>
-              <div class="fw-semibold">LinkedIn</div>
-              <a href="https://www.linkedin.com/in/surabodee-phasuk-ba63b7398/"
-                 target="_blank"
-                 class="text-decoration-none">
-                Surabodee-Phasuk
-              </a>
-            </div>
-          </div>
-
-          <!-- Instagram -->
-          <div class="d-flex align-items-center">
-            <div class="contact-icon me-3">
-              <i class="bi bi-instagram fs-5" style="color:#E1306C;"></i>
-            </div>
-            <div>
-              <div class="fw-semibold">Instagram</div>
-              <a href="https://www.instagram.com/_sprdee_/"
-                 target="_blank"
-                 class="text-decoration-none">
-                @_sprdee_
-              </a>
-            </div>
-          </div>
-
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-
-    <!-- Footer -->
     <footer class="py-3 border-top">
       <div class="container text-center">
         © <span id="year"></span> Surabodee
-
       </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
     <script src="js/scripts.js"></script>
   </body>
 </html>

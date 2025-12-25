@@ -70,3 +70,21 @@ footer {
   color: #6b7280;
 }
 
+/* ================= Language Switcher ================= */
+
+/* ถ้า Body เป็น class 'en' ให้ซ่อนภาษาไทย */
+body.en .lang-th {
+  display: none !important;
+}
+
+/* ถ้า Body เป็น class 'th' ให้ซ่อนภาษาอังกฤษ */
+body.th .lang-en {
+  display: none !important;
+}
+
+/* ปรับแต่งปุ่มเปลี่ยนภาษา */
+#lang-toggle {
+  cursor: pointer;
+  font-weight: 600;
+  min-width: 40px;
+}

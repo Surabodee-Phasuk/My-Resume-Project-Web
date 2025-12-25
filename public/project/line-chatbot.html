@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>My Profile</title>
+    <title>Missing People - Project Details</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap"
@@ -24,14 +24,18 @@
     <link href="../css/project.css" rel="stylesheet" />
   </head>
 
-  <body class="d-flex flex-column h-100 bg-light">
-    <main class="flex-shrink-0">
+  <body class="d-flex flex-column h-100 bg-light en"> <main class="flex-shrink-0">
 
       <nav class="navbar navbar-expand-lg border-bottom">
         <div class="container">
           <a class="navbar-brand fw-bold" href="../index.html">
-            ← Back to Home
+            <span class="lang-en">← Back to Home</span>
+            <span class="lang-th">← กลับหน้าหลัก</span>
           </a>
+
+          <div class="ms-auto d-flex align-items-center">
+            <button id="lang-toggle" class="btn btn-outline-dark btn-sm fw-bold" style="width: 45px;">TH</button>
+          </div>
         </div>
       </nav>
 
@@ -42,7 +46,12 @@
               <span class="text-gradient d-inline">Missing People</span>
             </h1>
             <p class="lead text-muted mt-3">
-            เป็นโปรเจกต์ที่ทำเป็นทีมเป็นระบบข้อมูลผู้สูญหายผ่าน LINE Chatbotเพื่อให้การแจ้งเบาะแสและติดตามผู้สูญหายเป็นระบบมากขึ้น โดยจัดเก็บข้อมูลในฐานข้อมูลบนคลาวด์และใช้บริการ AWS เพื่อเพิ่มประสิทธิภาพ ความปลอดภัย และความสะดวกในการค้นหา
+              <span class="lang-en">
+                A team project developing a missing persons information system via LINE Chatbot to streamline reporting and tracking. Data is stored in a cloud database using AWS services to enhance efficiency, security, and searchability.
+              </span>
+              <span class="lang-th">
+                เป็นโปรเจกต์ที่ทำเป็นทีมเป็นระบบข้อมูลผู้สูญหายผ่าน LINE Chatbot เพื่อให้การแจ้งเบาะแสและติดตามผู้สูญหายเป็นระบบมากขึ้น โดยจัดเก็บข้อมูลในฐานข้อมูลบนคลาวด์และใช้บริการ AWS เพื่อเพิ่มประสิทธิภาพ ความปลอดภัย และความสะดวกในการค้นหา
+              </span>
             </p>
           </div>
 
@@ -57,15 +66,19 @@
                   </a>
                 </div>
 
-                <!--card1-->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">LINE Chatbot</h5>
-                          <p class="small text-muted mb-0">เป็นการใช้ Line Chatbot ในการรับข้อมูลผ่านแชทเพื่อนำข้อมูลเข้าสู่ Cloud ผ่าน AWS Services โดยจะแบ่งเป็นการ
-                            แจ้งข้อมูลคนหายและแจ้งการพบเบาะแส
+                          <p class="small text-muted mb-0">
+                            <span class="lang-en">
+                                Uses a LINE Chatbot to receive information via chat and upload it to the Cloud via AWS Services. The system is divided into reporting missing persons and reporting sightings/clues.
+                            </span>
+                            <span class="lang-th">
+                                เป็นการใช้ Line Chatbot ในการรับข้อมูลผ่านแชทเพื่อนำข้อมูลเข้าสู่ Cloud ผ่าน AWS Services โดยจะแบ่งเป็นการแจ้งข้อมูลคนหายและแจ้งการพบเบาะแส
+                            </span>
                           </p>
                         </div>
                       </div>
@@ -80,19 +93,30 @@
                   </div>
                 </div>
 
-                <!--card2-->               
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">Architecture Diagram</h5>
-                          <p class="small text-muted mb-0">1. สร้าง LINE Messaging API<br>
-                                                        2. สร้าง Lambda Function<br>
-                                                        3. เชื่อมต่อ Lambda กับ LINE ด้วย Webhook URL<br>
-                                                        4. สร้างฐานข้อมูล DynamoDB<br>
-                                                        5. สร้าง S3 Bucket<br>
-                                                        6. ตรวจสอบการทำงานผ่าน CloudWatch</p>
+                          <p class="small text-muted mb-0">
+                            <span class="lang-en">
+                                1. Create LINE Messaging API<br>
+                                2. Create Lambda Function<br>
+                                3. Connect Lambda to LINE via Webhook URL<br>
+                                4. Create DynamoDB database<br>
+                                5. Create S3 Bucket<br>
+                                6. Monitor performance via CloudWatch
+                            </span>
+                            <span class="lang-th">
+                                1. สร้าง LINE Messaging API<br>
+                                2. สร้าง Lambda Function<br>
+                                3. เชื่อมต่อ Lambda กับ LINE ด้วย Webhook URL<br>
+                                4. สร้างฐานข้อมูล DynamoDB<br>
+                                5. สร้าง S3 Bucket<br>
+                                6. ตรวจสอบการทำงานผ่าน CloudWatch
+                            </span>
+                          </p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
@@ -106,15 +130,24 @@
                   </div>
                 </div>
 
-                <!--card3-->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                 <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                     <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                         <h5 class="text-primary fw-bolder mb-2">Video Demo</h5>
-                        <a href="https://youtu.be/cdPFyjUd8to" class="btn btn-danger btn-sm small fw-bolder" target="_blank">Link to my Youtube</a>
-                        <p class="small text-muted mb-0">Video demo ระบบต่างๆในแต่ละระบบของสมาชิกทีมเพื่อให้เห็นภาพการทำงานต่างๆ</p>
+                        <a href="https://youtu.be/cdPFyjUd8to" class="btn btn-danger btn-sm small fw-bolder" target="_blank">
+                             <span class="lang-en">Link to my Youtube</span>
+                             <span class="lang-th">ลิงก์ Youtube ของฉัน</span>
+                        </a>
+                        <p class="small text-muted mb-0 mt-2">
+                            <span class="lang-en">
+                                Video demo showing various systems developed by team members to visualize the workflow.
+                            </span>
+                            <span class="lang-th">
+                                Video demo ระบบต่างๆในแต่ละระบบของสมาชิกทีมเพื่อให้เห็นภาพการทำงานต่างๆ
+                            </span>
+                        </p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
@@ -147,5 +180,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/scripts.js"></script>
   </body>
 </html>

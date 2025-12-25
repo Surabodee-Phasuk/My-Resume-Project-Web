@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>My Profile</title>
+    <title>Sentiment Analysis - Project Details</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap"
@@ -24,14 +24,18 @@
     <link href="../css/project.css" rel="stylesheet" />
   </head>
 
-  <body class="d-flex flex-column h-100 bg-light">
-    <main class="flex-shrink-0">
+  <body class="d-flex flex-column h-100 bg-light en"> <main class="flex-shrink-0">
 
       <nav class="navbar navbar-expand-lg border-bottom">
         <div class="container">
           <a class="navbar-brand fw-bold" href="../index.html">
-            ← Back to Home
+            <span class="lang-en">← Back to Home</span>
+            <span class="lang-th">← กลับหน้าหลัก</span>
           </a>
+          
+          <div class="ms-auto d-flex align-items-center">
+            <button id="lang-toggle" class="btn btn-outline-dark btn-sm fw-bold" style="width: 45px;">TH</button>
+          </div>
         </div>
       </nav>
 
@@ -42,7 +46,12 @@
               <span class="text-gradient d-inline">Book Review Sentiment Analysis</span>
             </h1>
             <p class="lead text-muted mt-3">
-              เป็นโมเดลที่ทำการเปรียบเทียบระหว่างการใช้ baseline และ LSTM มาวิเคราะห์รีวิวหนังสือจาก Amazon Kindle <br>โดยเรานำรีวิวทั้งหมดมากรองคำออกมาได้ 21,605 ประโยคแล้วแยกรีวิวเป็นเชิงบวก/ลบ และเป็นกลางโดยจะสรุปผลออกมาในรูปแบบกราฟ Lime
+              <span class="lang-en">
+                A model comparing Baseline and LSTM approaches for analyzing Amazon Kindle book reviews. <br>We filtered reviews down to 21,605 sentences, classified them as positive/negative/neutral, and visualized the results using LIME graphs.
+              </span>
+              <span class="lang-th">
+                เป็นโมเดลที่ทำการเปรียบเทียบระหว่างการใช้ baseline และ LSTM มาวิเคราะห์รีวิวหนังสือจาก Amazon Kindle <br>โดยเรานำรีวิวทั้งหมดมากรองคำออกมาได้ 21,605 ประโยคแล้วแยกรีวิวเป็นเชิงบวก/ลบ และเป็นกลางโดยจะสรุปผลออกมาในรูปแบบกราฟ Lime
+              </span>
             </p>
           </div>
 
@@ -58,177 +67,214 @@
                   </a>
                 </div>
 
-                <!--card1-->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">Preprocessing</h5>
-                          <p class="small text-muted mb-0">เริ่มที่การทำความสะอาดข้อมูล เช่นตัดรีวิวที่สั้นเกินไป มีค่าว่าง หรือ sentiment ที่ไม่ถูกต้องออกทำให้เหลือข้อมูลพร้อมใช้งานเพียง 21,684 แถว และสร้าง Input ในรูปแบบ aspect sentence เพื่อช่วยให้โมเดลรู้ว่าต้องวิเคราะห์เป็น Aspect(ด้าน)ใดๆ</p>
+                          <p class="small text-muted mb-0">
+                            <span class="lang-en">
+                                Started with data cleaning, removing reviews that were too short, contained null values, or had incorrect sentiment labels, resulting in 21,684 usable rows. Created input in "aspect sentence" format to help the model identify which aspect to analyze.
+                            </span>
+                            <span class="lang-th">
+                                เริ่มที่การทำความสะอาดข้อมูล เช่นตัดรีวิวที่สั้นเกินไป มีค่าว่าง หรือ sentiment ที่ไม่ถูกต้องออกทำให้เหลือข้อมูลพร้อมใช้งานเพียง 21,684 แถว และสร้าง Input ในรูปแบบ aspect sentence เพื่อช่วยให้โมเดลรู้ว่าต้องวิเคราะห์เป็น Aspect(ด้าน)ใดๆ
+                            </span>
+                          </p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
                           src="../picture/Book Review Sentiment Analysis/1.png"
-                          alt="Login"
+                          alt="Preprocessing"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <!--card2-->               
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">LSTM Model</h5>
-                          <p class="small text-muted mb-0">โดยโมเดลหลักของเราคือ Bidirectional LSTM เพื่อให้เข้าใจบริบทของประโยค และเพิ่ม Class Weights ให้ Neutral และ Negative เพื่อแก้ปัญหาข้อมูลไม่สมดุล โดยได้ค่า Accuracy ที่67%</p>
+                          <p class="small text-muted mb-0">
+                            <span class="lang-en">
+                                Our main model is Bidirectional LSTM, chosen for its ability to understand sentence context. We added Class Weights for Neutral and Negative classes to address data imbalance, achieving an accuracy of 67%.
+                            </span>
+                            <span class="lang-th">
+                                โดยโมเดลหลักของเราคือ Bidirectional LSTM เพื่อให้เข้าใจบริบทของประโยค และเพิ่ม Class Weights ให้ Neutral และ Negative เพื่อแก้ปัญหาข้อมูลไม่สมดุล โดยได้ค่า Accuracy ที่67%
+                            </span>
+                          </p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
                           src="../picture/Book Review Sentiment Analysis/2.png"
-                          alt="Home"
+                          alt="LSTM Model"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <!--card3-->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">Baseline Model</h5>
-                          <p class="small text-muted mb-0">Baseline ของเราคือ TF-IDF + Logistic Regression เป็นโมเดลง่ายแต่มีประสิทธิภาพดีมาก และให้ Accuracy สูงที่สุดในโปรเจกต์ที่ 68% ซึ่งจะแสดงให้เห็นว่าแม้ Logistic Regression จะได้ความแม่นยำที่สูงกว่าเล็กน้อย แต่ Bi-LSTM จะมีความสามารถเชิงเข้าใจบริบทที่ละเอียดกว่า โดยเฉพาะในประโยคที่มี Sentiment ผสมกัน</p>
+                          <p class="small text-muted mb-0">
+                            <span class="lang-en">
+                                Our baseline is TF-IDF + Logistic Regression, a simple yet highly effective model yielding the highest accuracy in the project at 68%. This demonstrates that while Logistic Regression is slightly more accurate, Bi-LSTM offers better contextual understanding, especially in sentences with mixed sentiments.
+                            </span>
+                            <span class="lang-th">
+                                Baseline ของเราคือ TF-IDF + Logistic Regression เป็นโมเดลง่ายแต่มีประสิทธิภาพดีมาก และให้ Accuracy สูงที่สุดในโปรเจกต์ที่ 68% ซึ่งจะแสดงให้เห็นว่าแม้ Logistic Regression จะได้ความแม่นยำที่สูงกว่าเล็กน้อย แต่ Bi-LSTM จะมีความสามารถเชิงเข้าใจบริบทที่ละเอียดกว่า โดยเฉพาะในประโยคที่มี Sentiment ผสมกัน
+                            </span>
+                          </p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
                           src="../picture/Book Review Sentiment Analysis/3.png"
-                          alt="githubprofilepic1"
+                          alt="Baseline Model"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <!--card4-->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">Case 1-3</h5>
-                          <p class="small text-muted mb-0">โดย 3 เคสแรกเป็นประโยคที่มี Sentiment ตรงกัน โดยในเคสที่มีผลไม่ขัดแย้งกันได้ผลเป็นทั้งสองโมเดลทำถูก 100% ไม่มีปัญหา แสดงว่าโมเดลจับคำสำคัญ เช่น amazing หรือ terrible ได้ดี แต่ LSTM ให้คะแนนความมั่นใจสูงกว่าอย่างเห็นได้ชัด</p>
+                          <p class="small text-muted mb-0">
+                            <span class="lang-en">
+                                The first 3 cases involve sentences with consistent sentiment. In non-conflicting cases, both models performed 100% correctly without issues, showing they capture keywords like "amazing" or "terrible" well. However, LSTM provided significantly higher confidence scores.
+                            </span>
+                            <span class="lang-th">
+                                โดย 3 เคสแรกเป็นประโยคที่มี Sentiment ตรงกัน โดยในเคสที่มีผลไม่ขัดแย้งกันได้ผลเป็นทั้งสองโมเดลทำถูก 100% ไม่มีปัญหา แสดงว่าโมเดลจับคำสำคัญ เช่น amazing หรือ terrible ได้ดี แต่ LSTM ให้คะแนนความมั่นใจสูงกว่าอย่างเห็นได้ชัด
+                            </span>
+                          </p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
                           src="../picture/Book Review Sentiment Analysis/4.png"
-                          alt="githubprofilepic1"
+                          alt="Case 1-3"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <!--card5-->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">Case 4</h5>
-                          <p class="small text-muted mb-0">ในเคสที่ขัดแย้งกัน sentence โมเดล Baseline จะผิดทั้งหมด เพราะเวลามีทั้งคำบวกและลบ จะเฉลี่ยออกมากลายเป็น Neutral ส่วน LSTM แม้ไม่ได้ถูกทั้งหมด แต่สามารถจับคู่คำว่า amazing กับ plot ได้ถูกต้อง ถือว่าความเข้าใจเชิงบริบทดีกว่าbaseline</p>
+                          <p class="small text-muted mb-0">
+                            <span class="lang-en">
+                                In conflicting sentence cases, the Baseline model failed completely because the presence of both positive and negative words averaged out to Neutral. LSTM, while not perfect, correctly paired "amazing" with "plot", demonstrating better contextual understanding than the baseline.
+                            </span>
+                            <span class="lang-th">
+                                ในเคสที่ขัดแย้งกัน sentence โมเดล Baseline จะผิดทั้งหมด เพราะเวลามีทั้งคำบวกและลบ จะเฉลี่ยออกมากลายเป็น Neutral ส่วน LSTM แม้ไม่ได้ถูกทั้งหมด แต่สามารถจับคู่คำว่า amazing กับ plot ได้ถูกต้อง ถือว่าความเข้าใจเชิงบริบทดีกว่า baseline
+                            </span>
+                          </p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
                           src="../picture/Book Review Sentiment Analysis/5.png"
-                          alt="githubprofilepic1"
+                          alt="Case 4"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <!--card6-->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">Conclusion</h5>
-                          <p class="small text-muted mb-0">จะพบว่าคำว่า amazing และ boring มีผลต่อผลลัพธ์ชัดเจน แต่ LSTM ยังติด bias จากคำ positive ที่อยู่ต้นประโยค ทำให้บางครั้งทายผิดครับ สรุปคือ แม้ Logistic Regression จะให้ Accuracy สูงกว่า 1% แต่ Bi-LSTM เหมาะสมกว่าในการทำ ABSA เพราะเข้าใจคำเชื่อม ความสัมพันธ์ระยะไกล และแยกแยะประโยคที่ซับซ้อนมากกว่า</p>
+                          <p class="small text-muted mb-0">
+                            <span class="lang-en">
+                                We found that words like "amazing" and "boring" clearly impact the results, though LSTM still has some bias from positive words at the beginning of sentences. In conclusion, although Logistic Regression had 1% higher accuracy, Bi-LSTM is more suitable for ABSA due to its understanding of conjunctions, long-distance dependencies, and complex sentences.
+                            </span>
+                            <span class="lang-th">
+                                จะพบว่าคำว่า amazing และ boring มีผลต่อผลลัพธ์ชัดเจน แต่ LSTM ยังติด bias จากคำ positive ที่อยู่ต้นประโยค ทำให้บางครั้งทายผิดครับ สรุปคือ แม้ Logistic Regression จะให้ Accuracy สูงกว่า 1% แต่ Bi-LSTM เหมาะสมกว่าในการทำ ABSA เพราะเข้าใจคำเชื่อม ความสัมพันธ์ระยะไกล และแยกแยะประโยคที่ซับซ้อนมากกว่า
+                            </span>
+                          </p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
                           src="../picture/Book Review Sentiment Analysis/6.png"
-                          alt="githubprofilepic1"
+                          alt="Conclusion"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <!--card7-->               
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">Video Present</h5>
-                          <a href="https://youtu.be/InSy8KSuxpY" class="btn btn-danger btn-sm small fw-bolder" target="_blank">Link to my Youtube</a>
-                          <p class="small text-muted mb-0"></p>
+                          <a href="https://youtu.be/InSy8KSuxpY" class="btn btn-danger btn-sm small fw-bolder" target="_blank">
+                             <span class="lang-en">Link to my Youtube</span>
+                             <span class="lang-th">ลิงก์ Youtube ของฉัน</span>
+                          </a>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
                           src="../picture/Book Review Sentiment Analysis/0.png"
-                          alt="Home"
+                          alt="Video Present"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <!--card8-->               
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">Video Code Review</h5>
-                          <a href="https://youtu.be/Ue0YDMatWmY" class="btn btn-danger btn-sm small fw-bolder" target="_blank">Link to my Youtube</a>
-                          <p class="small text-muted mb-0"></p>
+                          <a href="https://youtu.be/Ue0YDMatWmY" class="btn btn-danger btn-sm small fw-bolder" target="_blank">
+                             <span class="lang-en">Link to my Youtube</span>
+                             <span class="lang-th">ลิงก์ Youtube ของฉัน</span>
+                          </a>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
                           src="../picture/Book Review Sentiment Analysis/8.png"
-                          alt="Home"
+                          alt="Code Review"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <!--card9-->               
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
@@ -236,16 +282,16 @@
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">IEEE Format</h5>
                             <a href="https://github.com/Surabodee-Phasuk/Book-Review-Sentiment-Analysis/blob/main/cs374_NLP_BookSentiment%20Analysis.pdf" class="btn btn-dark">
-                            Report (PDF)
+                             <span class="lang-en">Report (PDF)</span>
+                             <span class="lang-th">รายงาน (PDF)</span>
                             </a>
-                          <p class="small text-muted mb-0"></p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
                           src="../picture/Book Review Sentiment Analysis/7.png"
-                          alt="Home"
+                          alt="IEEE Report"
                         />
                       </div>
                     </div>
@@ -270,5 +316,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/scripts.js"></script>
   </body>
 </html>

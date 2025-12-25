@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>My Profile</title>
+    <title>Maze Algorithm - Project Details</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap"
@@ -24,14 +24,18 @@
     <link href="../css/project.css" rel="stylesheet" />
   </head>
 
-  <body class="d-flex flex-column h-100 bg-light">
-    <main class="flex-shrink-0">
+  <body class="d-flex flex-column h-100 bg-light en"> <main class="flex-shrink-0">
 
       <nav class="navbar navbar-expand-lg border-bottom">
         <div class="container">
           <a class="navbar-brand fw-bold" href="../index.html">
-            ← Back to Home
+            <span class="lang-en">← Back to Home</span>
+            <span class="lang-th">← กลับหน้าหลัก</span>
           </a>
+          
+          <div class="ms-auto d-flex align-items-center">
+            <button id="lang-toggle" class="btn btn-outline-dark btn-sm fw-bold" style="width: 45px;">TH</button>
+          </div>
         </div>
       </nav>
 
@@ -42,8 +46,14 @@
               <span class="text-gradient d-inline">Maze Generating Algorithm</span>
             </h1>
             <p class="lead text-muted mt-3">
-              เป็นการทำระบบแก้เขาวงกตเพื่อเปรียบเทียบประสิทธิภาพของ Breadth-First Search (BFS) และ A* Search 
-              <br>โดยใช้ Manhattan Distance เป็น heuristic ทดสอบกับเขาวงกตขนาด 60×60 ที่สุ่มสร้างขึ้นในหลายสถานการณ์
+              <span class="lang-en">
+                A maze solving system comparing the efficiency of Breadth-First Search (BFS) and A* Search.
+                <br>Using Manhattan Distance as a heuristic, tested on randomly generated 60x60 mazes across various scenarios.
+              </span>
+              <span class="lang-th">
+                เป็นการทำระบบแก้เขาวงกตเพื่อเปรียบเทียบประสิทธิภาพของ Breadth-First Search (BFS) และ A* Search 
+                <br>โดยใช้ Manhattan Distance เป็น heuristic ทดสอบกับเขาวงกตขนาด 60×60 ที่สุ่มสร้างขึ้นในหลายสถานการณ์
+              </span>
             </p>
           </div>
 
@@ -59,22 +69,22 @@
                 </div>
 
 
-                <!--card1-->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">Core Concepts</h5>
-                          <p class="small text-muted mb-0">BFS หรือ Breadth-First Search
-                          เป็น Uninformed Search
-                          จะขยาย Node จากใกล้ไปไกลแบบรอบตัว
-                          ไม่ใช้ข้อมูลของตำแหน่งเป้าหมายเลย<br>
-
-                          ส่วน A* Search เป็น Informed Search
-                          ใช้ heuristic คือ Manhattan Distance
-                          ร่วมกับ heapq เพื่อจัดลำดับการค้นหา
-                          ทำให้เลือกสำรวจ Node ที่มีแนวโน้มเข้าใกล้เป้าหมายก่อน</p>
+                          <p class="small text-muted mb-0">
+                            <span class="lang-en">
+                                <strong>BFS (Breadth-First Search)</strong> is an Uninformed Search that expands nodes from near to far in all directions, without using any target location data.<br><br>
+                                <strong>A* Search</strong> is an Informed Search that uses a heuristic (Manhattan Distance) along with a priority queue (heapq) to prioritize exploring nodes that are likely closer to the target.
+                            </span>
+                            <span class="lang-th">
+                                BFS หรือ Breadth-First Search เป็น Uninformed Search จะขยาย Node จากใกล้ไปไกลแบบรอบตัว ไม่ใช้ข้อมูลของตำแหน่งเป้าหมายเลย<br><br>
+                                ส่วน A* Search เป็น Informed Search ใช้ heuristic คือ Manhattan Distance ร่วมกับ heapq เพื่อจัดลำดับการค้นหา ทำให้เลือกสำรวจ Node ที่มีแนวโน้มเข้าใกล้เป้าหมายก่อน
+                            </span>
+                          </p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
@@ -87,15 +97,20 @@
                     </div>
                   </div>
                 </div>
-                <!--card2-->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">Maze Example</h5>
-                          <p class="small text-muted mb-0">ในงานนี้เราใช้เขาวงกตเป็นตัวอย่าง
-                            ภาพที่เห็นคือเขาวงกตหลังจากทุบกำแพงเพิ่ม ซึ่งเราเรียกว่า Open Zone เส้นสีแดงที่เห็น คือเส้นทางที่สั้นที่สุด ซึ่งได้มาจากการ backtracking จากจุดหมายกลับไปยังจุดเริ่มต้น</p>
+                          <p class="small text-muted mb-0">
+                            <span class="lang-en">
+                                This example shows a maze with walls broken down to create an "Open Zone". The red line represents the shortest path found by backtracking from the destination to the start point.
+                            </span>
+                            <span class="lang-th">
+                                ในงานนี้เราใช้เขาวงกตเป็นตัวอย่าง ภาพที่เห็นคือเขาวงกตหลังจากทุบกำแพงเพิ่ม ซึ่งเราเรียกว่า Open Zone เส้นสีแดงที่เห็น คือเส้นทางที่สั้นที่สุด ซึ่งได้มาจากการ backtracking จากจุดหมายกลับไปยังจุดเริ่มต้น
+                            </span>
+                          </p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
@@ -109,15 +124,21 @@
                   </div>
                 </div>
 
-                <!--card3-->               
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">Result Table</h5>
-                          <p class="small text-muted mb-0">-สถานการณ์ที่ 1 A* ชนะ BFS ทุกครั้งแต่จำนวน Node ที่ต่างกันยังไม่มากอยู่ประมาณ 0-18 เปอร์เซ็นต์
-                            <br>-สถานการณ์ที่ 2 หลัง Open Zone A* ชนะอย่างชัดเจนทุกครั้งลดจำนวน Node ได้ประมาณ 40-84 <br>เปอร์เซ็นต์จะแสดงให้เห็นถึงความแตกต่างด้านประสิทธิภาพอย่างชัดเจน
+                          <p class="small text-muted mb-0">
+                            <span class="lang-en">
+                                - Scenario 1: A* beats BFS every time, but the node count difference is small (approx. 0-18%).<br>
+                                - Scenario 2 (Open Zone): A* clearly outperforms BFS, reducing node count by approx. 40-84%, showing significant efficiency gains.
+                            </span>
+                            <span class="lang-th">
+                                -สถานการณ์ที่ 1 A* ชนะ BFS ทุกครั้งแต่จำนวน Node ที่ต่างกันยังไม่มากอยู่ประมาณ 0-18 เปอร์เซ็นต์<br>
+                                -สถานการณ์ที่ 2 หลัง Open Zone A* ชนะอย่างชัดเจนทุกครั้งลดจำนวน Node ได้ประมาณ 40-84 เปอร์เซ็นต์จะแสดงให้เห็นถึงความแตกต่างด้านประสิทธิภาพอย่างชัดเจน
+                            </span>
                           </p>
                         </div>
                       </div>
@@ -132,15 +153,21 @@
                   </div>
                 </div>
 
-                <!--card4-->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">Analysis</h5>
-                          <p class="small text-muted mb-0">ในเขาวงกตปกติเส้นทางถูกกำแพงบังคับแม้ A* จะรู้ว่าเป้าหมายอยู่ทิศไหนแต่ถ้าต้องเลี้ยวซ้ายก็ต้องเลี้ยวเหมือน BFS ทำให้ผลลัพธ์ใกล้เคียงกัน
-                            <br>แต่ใน Open Zone พื้นที่เปิดกว้าง heuristic สามารถชี้ทางได้แม่น A* จึงพุ่งเข้าใกล้เป้าหมายได้จริงขณะที่ BFS ยังต้องกระจายค้นหาเป็นวงกว้าง
+                          <p class="small text-muted mb-0">
+                            <span class="lang-en">
+                                In a normal maze, walls force the path. Even if A* knows the direction, it must follow the same turns as BFS, leading to similar results.<br>
+                                However, in an Open Zone, the heuristic can guide accurately. A* moves directly towards the target, while BFS still searches in a wide circle.
+                            </span>
+                            <span class="lang-th">
+                                ในเขาวงกตปกติเส้นทางถูกกำแพงบังคับแม้ A* จะรู้ว่าเป้าหมายอยู่ทิศไหนแต่ถ้าต้องเลี้ยวซ้ายก็ต้องเลี้ยวเหมือน BFS ทำให้ผลลัพธ์ใกล้เคียงกัน<br>
+                                แต่ใน Open Zone พื้นที่เปิดกว้าง heuristic สามารถชี้ทางได้แม่น A* จึงพุ่งเข้าใกล้เป้าหมายได้จริงขณะที่ BFS ยังต้องกระจายค้นหาเป็นวงกว้าง
+                            </span>
                           </p>
                         </div>
                       </div>
@@ -155,18 +182,28 @@
                   </div>
                 </div>
 
-                <!--card5-->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">Conclusion</h5>
-                          <p class="small text-muted mb-0">-A* ใช้ Node น้อยกว่า BFS ทุกกรณี
-                          <br>-Open Zone ทำให้ A* ใช้ heuristic ได้เต็มประสิทธิภาพ
-                          <br>-BFS เหมาะกับปัญหาที่ไม่ซับซ้อนหรือไม่มี heuristic
-                          <br>-A* เหมาะกับพื้นที่เปิดหรือมีหลายเส้นทาง
-                          <br>-ทั้งสองอัลกอริทึมสามารถหาเส้นทางที่ถูกต้องได้เหมือนกัน</p>
+                          <p class="small text-muted mb-0">
+                            <span class="lang-en">
+                                - A* visits fewer nodes than BFS in all cases.<br>
+                                - Open Zones allow A* to fully utilize its heuristic.<br>
+                                - BFS is suitable for simple problems or when no heuristic is available.<br>
+                                - A* is better for open areas or multiple path options.<br>
+                                - Both algorithms can find the correct path equally well.
+                            </span>
+                            <span class="lang-th">
+                                -A* ใช้ Node น้อยกว่า BFS ทุกกรณี<br>
+                                -Open Zone ทำให้ A* ใช้ heuristic ได้เต็มประสิทธิภาพ<br>
+                                -BFS เหมาะกับปัญหาที่ไม่ซับซ้อนหรือไม่มี heuristic<br>
+                                -A* เหมาะกับพื้นที่เปิดหรือมีหลายเส้นทาง<br>
+                                -ทั้งสองอัลกอริทึมสามารถหาเส้นทางที่ถูกต้องได้เหมือนกัน
+                            </span>
+                          </p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
@@ -180,15 +217,16 @@
                   </div>
                 </div>
 
-                <!--card6-->               
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">Video Present</h5>
-                          <a href="https://youtu.be/ql8sInNJulQ" class="btn btn-danger btn-sm small fw-bolder" target="_blank">Link to my Youtube</a>
-                          <p class="small text-muted mb-0"></p>
+                          <a href="https://youtu.be/ql8sInNJulQ" class="btn btn-danger btn-sm small fw-bolder" target="_blank">
+                             <span class="lang-en">Link to my Youtube</span>
+                             <span class="lang-th">ลิงก์ Youtube ของฉัน</span>
+                          </a>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
@@ -202,15 +240,16 @@
                   </div>
                 </div>
 
-                <!--card7-->               
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">Video Code Review</h5>
-                          <a href="https://youtu.be/ZGHCoUY5xDM" class="btn btn-danger btn-sm small fw-bolder" target="_blank">Link to my Youtube</a>
-                          <p class="small text-muted mb-0"></p>
+                          <a href="https://youtu.be/ZGHCoUY5xDM" class="btn btn-danger btn-sm small fw-bolder" target="_blank">
+                             <span class="lang-en">Link to my Youtube</span>
+                             <span class="lang-th">ลิงก์ Youtube ของฉัน</span>
+                          </a>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
@@ -224,7 +263,6 @@
                   </div>
                 </div>
 
-                <!--card8-->               
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
@@ -232,9 +270,9 @@
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">IEEE Format</h5>
                             <a href="https://github.com/Surabodee-Phasuk/Smash-the-Maze-with-Search-Algorithms-Comparison-BFS-VS-A-/blob/main/Cs373_Smash%20the%20Maze.pdf" class="btn btn-dark">
-                            Report (PDF)
+                             <span class="lang-en">Report (PDF)</span>
+                             <span class="lang-th">รายงาน (PDF)</span>
                             </a>
-                          <p class="small text-muted mb-0"></p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
@@ -266,5 +304,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/scripts.js"></script>
   </body>
 </html>

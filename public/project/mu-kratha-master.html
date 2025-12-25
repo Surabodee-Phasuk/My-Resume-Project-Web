@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>My Profile</title>
+    <title>MuKrathaMaster - Project Details</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap"
@@ -24,14 +24,18 @@
     <link href="../css/project.css" rel="stylesheet" />
   </head>
 
-  <body class="d-flex flex-column h-100 bg-light">
-    <main class="flex-shrink-0">
+  <body class="d-flex flex-column h-100 bg-light en"> <main class="flex-shrink-0">
 
       <nav class="navbar navbar-expand-lg border-bottom">
         <div class="container">
           <a class="navbar-brand fw-bold" href="../index.html">
-            ← Back to Home
+            <span class="lang-en">← Back to Home</span>
+            <span class="lang-th">← กลับหน้าหลัก</span>
           </a>
+          
+          <div class="ms-auto d-flex align-items-center">
+            <button id="lang-toggle" class="btn btn-outline-dark btn-sm fw-bold" style="width: 45px;">TH</button>
+          </div>
         </div>
       </nav>
 
@@ -42,9 +46,14 @@
               <span class="text-gradient d-inline">MuKrathaMaster</span>
             </h1>
             <p class="lead text-muted mt-3">
-              เกมแนวจำลองสถานการณ์ (Simulation Game) บรรยากาศของการปิ้งหมูกระทะแบบไทย<br>
-              โดยผู้เล่นต้องเลือกวัตถุดิบนำไปปิ้งบนเตาและเสิร์ฟให้ถูกจังหวะเพื่อเก็บคะแนนและค่าความสุข (Happiness) ตามระดับความสุก
-
+              <span class="lang-en">
+                A simulation game capturing the atmosphere of Thai-style BBQ (Mu Kratha).<br>
+                Players select ingredients to grill and must serve them at the right moment to earn points and Happiness based on their doneness.
+              </span>
+              <span class="lang-th">
+                เกมแนวจำลองสถานการณ์ (Simulation Game) บรรยากาศของการปิ้งหมูกระทะแบบไทย<br>
+                โดยผู้เล่นต้องเลือกวัตถุดิบนำไปปิ้งบนเตาและเสิร์ฟให้ถูกจังหวะเพื่อเก็บคะแนนและค่าความสุข (Happiness) ตามระดับความสุก
+              </span>
             </p>
           </div>
 
@@ -59,18 +68,26 @@
                   </a>
                 </div>
 
-                <!--card1-->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">Main Menu</h5>
-                          <p class="small text-muted mb-0">ประกอบไปด้วย 3 องค์ประกอบ พื้นหลัง, โลโก้เกม, แสดงชื่อเกม และแสดงปุ่มหลัก 3 ปุ่ม โดยปุ่มจะเปลี่ยนไปตามภาษาเครื่องรองรับไทยและอังกฤษ<br>
-🔴 “เริ่มเกมใหม่ / START” → เข้าสู่หน้าเล่นเกม<br>
-🟢 “เล่นต่อ / RESUME” → โหลดเกมที่ค้างไว้(เล่นต่อจะสามารถกดเล่นได้เมื่อมีข้อมูลเดิมที่เล่นค้างไว้)<br>
-🔵 “ดูประวัติ / HISTORY” → ดูคะแนนสูงสุดที่เคยทำได้
-</p>
+                          <p class="small text-muted mb-0">
+                            <span class="lang-en">
+                                Consists of 3 elements: Background, Logo, Title, and 3 main buttons (adapts to device language Thai/English):<br>
+                                🔴 “START” → Enter game screen<br>
+                                🟢 “RESUME” → Load saved game (enabled only if data exists)<br>
+                                🔵 “HISTORY” → View high scores
+                            </span>
+                            <span class="lang-th">
+                                ประกอบไปด้วย 3 องค์ประกอบ พื้นหลัง, โลโก้เกม, แสดงชื่อเกม และแสดงปุ่มหลัก 3 ปุ่ม โดยปุ่มจะเปลี่ยนไปตามภาษาเครื่องรองรับไทยและอังกฤษ<br>
+                                🔴 “เริ่มเกมใหม่ / START” → เข้าสู่หน้าเล่นเกม<br>
+                                🟢 “เล่นต่อ / RESUME” → โหลดเกมที่ค้างไว้ (เล่นต่อจะสามารถกดเล่นได้เมื่อมีข้อมูลเดิมที่เล่นค้างไว้)<br>
+                                🔵 “ดูประวัติ / HISTORY” → ดูคะแนนสูงสุดที่เคยทำได้
+                            </span>
+                          </p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
@@ -84,16 +101,22 @@
                   </div>
                 </div>
 
-                <!--card2-->               
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">Game Screen</h5>
-                          <p class="small text-muted mb-0">-วัตถุดิบแต่ละชิ้นจะมี “State ความสุก” และ “คะแนน” ที่แตกต่างกัน
-                        และผู้เล่นต้องแตะที่วัตถุดิบเพื่อวาง และแตะอีกครั้งเพื่อเสิร์ฟ<br>
-                        -องค์ประกอบของหน้าการเล่นเกมตัวแสดงคะแนนปัจจุบัน (Score)ปุ่ม Pauseกระทะหมูกระทะ พร้อมตำแหน่งสำหรับวางวัตถุดิบแถบเลือกวัตถุดิบด้านล่าง</p>
+                          <p class="small text-muted mb-0">
+                            <span class="lang-en">
+                                - Each ingredient has a different "Doneness State" and "Score". Players tap to place, and tap again to serve.<br>
+                                - Elements: Current Score, Pause Button, Grill Pan with slots, and Ingredient Selection Bar at the bottom.
+                            </span>
+                            <span class="lang-th">
+                                -วัตถุดิบแต่ละชิ้นจะมี “State ความสุก” และ “คะแนน” ที่แตกต่างกัน และผู้เล่นต้องแตะที่วัตถุดิบเพื่อวาง และแตะอีกครั้งเพื่อเสิร์ฟ<br>
+                                -องค์ประกอบของหน้าการเล่นเกมตัวแสดงคะแนนปัจจุบัน (Score) ปุ่ม Pause กระทะหมูกระทะ พร้อมตำแหน่งสำหรับวางวัตถุดิบแถบเลือกวัตถุดิบด้านล่าง
+                            </span>
+                          </p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
@@ -107,15 +130,21 @@
                   </div>
                 </div>
 
-                <!--card3-->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">State System</h5>
-                          <p class="small text-muted mb-0">🐷 หมู และ ไก่ (3 State) <br>ดิบ → Well Done → Burntเวลาข้าม state: 3 วินาที
-                            <br>🥩 เนื้อ (4 State) <br>ดิบ → Medium Rare → Well Done → Burnt เวลาข้าม state: 3 วินาที
+                          <p class="small text-muted mb-0">
+                            <span class="lang-en">
+                                🐷 Pork & Chicken (3 States) <br>Raw → Well Done → Burnt (Transition: 3s)<br>
+                                🥩 Beef (4 States) <br>Raw → Medium Rare → Well Done → Burnt (Transition: 3s)
+                            </span>
+                            <span class="lang-th">
+                                🐷 หมู และ ไก่ (3 State) <br>ดิบ → Well Done → Burnt เวลาข้าม state: 3 วินาที<br>
+                                🥩 เนื้อ (4 State) <br>ดิบ → Medium Rare → Well Done → Burnt เวลาข้าม state: 3 วินาที
+                            </span>
                           </p>
                         </div>
                       </div>
@@ -123,81 +152,112 @@
                         <img
                           class="img-fluid rounded-3"
                           src="../picture/MuKrathaMaster/6.png"
-                          alt="githubprofilepic1"
+                          alt="State System"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <!--card4-->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">Pause Screen</h5>
-                          <p class="small text-muted mb-0">หน้าพักจะแสดงเมื่อผู้เล่นกดปุ่ม Pause หรือออกจากแอปชั่วคราวมีปุ่มให้เลือกดังนี้
-                          <br>🟢“เล่นต่อ / RESUME” → เล่นเกมต่อจากที่พักไว้หน้าเล่นเกม
-                          <br>🔴 “ยอมแพ้ / Restart” → ยอมแพ้และเริ่มใหม่
-                          <br>🔵 “พักเกม / Exit” → ออกเกมที่กำลังเล่นอยู่ กลับไปหน้าหลัก</p>
+                          <p class="small text-muted mb-0">
+                            <span class="lang-en">
+                                Appears when Pause is pressed or app is minimized.<br>
+                                🟢 “RESUME” → Continue game<br>
+                                🔴 “RESTART” → Give up and restart<br>
+                                🔵 “EXIT” → Quit to Main Menu
+                            </span>
+                            <span class="lang-th">
+                                หน้าพักจะแสดงเมื่อผู้เล่นกดปุ่ม Pause หรือออกจากแอปชั่วคราวมีปุ่มให้เลือกดังนี้<br>
+                                🟢 “เล่นต่อ / RESUME” → เล่นเกมต่อจากที่พักไว้หน้าเล่นเกม<br>
+                                🔴 “ยอมแพ้ / Restart” → ยอมแพ้และเริ่มใหม่<br>
+                                🔵 “พักเกม / Exit” → ออกเกมที่กำลังเล่นอยู่ กลับไปหน้าหลัก
+                            </span>
+                          </p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
                           src="../picture/MuKrathaMaster/3.png"
-                          alt="githubprofilepic1"
+                          alt="Pause Screen"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <!--card5-->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">Result Screen</h5>
-                          <p class="small text-muted mb-0">เมื่อจบรอบ ระบบแสดงผลดังนี้
-                          <br>-จำนวนที่เสิร์ฟ
-                          <br>-คะแนนรวม
-                          <br>-คะแนนสูงสุด
-                          <br>-คะแนนความสุข
-                          <br>-จำนวนที่ไหม้</p>
+                          <p class="small text-muted mb-0">
+                            <span class="lang-en">
+                                End of round summary:<br>
+                                - Served Count<br>
+                                - Total Score<br>
+                                - High Score<br>
+                                - Happiness Score<br>
+                                - Burned Count
+                            </span>
+                            <span class="lang-th">
+                                เมื่อจบรอบ ระบบแสดงผลดังนี้<br>
+                                - จำนวนที่เสิร์ฟ<br>
+                                - คะแนนรวม<br>
+                                - คะแนนสูงสุด<br>
+                                - คะแนนความสุข<br>
+                                - จำนวนที่ไหม้
+                            </span>
+                          </p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
                           src="../picture/MuKrathaMaster/4.png"
-                          alt="githubprofilepic1"
+                          alt="Result Screen"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <!--card6-->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
                           <h5 class="text-primary fw-bolder mb-2">History Screen</h5>
-                          <p class="small text-muted mb-0">เมื่อกดปุ่มดูประวัติ จะแสดงผลดังนี้คะแนนสูงสุดที่เคยทำไว้
-                          <br>สถิติล่าสุด 
-                          <br>คะแนนล่าสุด
-                          <br>จำนวนเนื้อที่ปิ้งไปทั้งหมด</p>
+                          <p class="small text-muted mb-0">
+                            <span class="lang-en">
+                                Shows gameplay history:<br>
+                                - All-time High Score<br>
+                                - Recent Statistics<br>
+                                - Latest Score<br>
+                                - Total Ingredients Grilled
+                            </span>
+                            <span class="lang-th">
+                                เมื่อกดปุ่มดูประวัติ จะแสดงผลดังนี้<br>
+                                - คะแนนสูงสุดที่เคยทำไว้<br>
+                                - สถิติล่าสุด<br>
+                                - คะแนนล่าสุด<br>
+                                - จำนวนเนื้อที่ปิ้งไปทั้งหมด
+                            </span>
+                          </p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
                           src="../picture/MuKrathaMaster/5.png"
-                          alt="githubprofilepic1"
+                          alt="History Screen"
                         />
                       </div>
                     </div>
@@ -222,5 +282,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/scripts.js"></script>
   </body>
 </html>
