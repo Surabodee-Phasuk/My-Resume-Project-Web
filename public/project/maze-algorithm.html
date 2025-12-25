@@ -39,10 +39,11 @@
         <div class="container px-5 mb-5">
           <div class="text-center mb-5">
             <h1 class="display-5 fw-bolder mb-0">
-              <span class="text-gradient d-inline">Track Master</span>
+              <span class="text-gradient d-inline">Maze Generating Algorithm</span>
             </h1>
             <p class="lead text-muted mt-3">
-              Information & Contact Links
+              เป็นการทำระบบแก้เขาวงกตเพื่อเปรียบเทียบประสิทธิภาพของ Breadth-First Search (BFS) และ A* Search 
+              <br>โดยใช้ Manhattan Distance เป็น heuristic ทดสอบกับเขาวงกตขนาด 60×60 ที่สุ่มสร้างขึ้นในหลายสถานการณ์
             </p>
           </div>
 
@@ -51,11 +52,12 @@
               <section>
                 <div class="d-flex align-items-center justify-content-between mb-4">
                   <h2 class="text-primary fw-bolder mb-0">Information</h2>
-                  <a class="btn btn-dark px-4 py-2" href="https://github.com/Jutinut/CS251FinalProject" target="_blank">
+                  <a class="btn btn-dark px-4 py-2" href="https://github.com/Surabodee-Phasuk/Smash-the-Maze-with-Search-Algorithms-Comparison-BFS-VS-A-" target="_blank">
                     <div class="d-inline-block bi bi-github me-2"></div>
                     GitHub
                   </a>
                 </div>
+
 
                 <!--card1-->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
@@ -63,15 +65,43 @@
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
-                          <h5 class="text-primary fw-bolder mb-2">Login</h5>
-                          <p class="small text-muted mb-0">หากผู้ใช้ต้องการเข้าสู่ระบบโดยที่ยังไม่ได้ล็อกอิน ระบบจะแสดงหน้าต่าง pop up สำหรับการเข้าสู่ระบบโดยอัตโนมัติผู้ใช้สามารถเลือกเข้าสู่ระบบผ่านบัญชีGmail, Facebook หรือ Apple ID ได้หรือหากยังไม่มีบัญชีผู้ใช้งานสามารถลงทะเบียนผู้
-                          ใช้งาน (Sign up) เพื่อสมัครสมาชิก โดยระบบจะแสดงหน้าต่าง pop up สำหรับการกรอกข้อมูลสมัครใช้งานเว็บไซต์</p>
+                          <h5 class="text-primary fw-bolder mb-2">Core Concepts</h5>
+                          <p class="small text-muted mb-0">BFS หรือ Breadth-First Search
+                          เป็น Uninformed Search
+                          จะขยาย Node จากใกล้ไปไกลแบบรอบตัว
+                          ไม่ใช้ข้อมูลของตำแหน่งเป้าหมายเลย<br>
+
+                          ส่วน A* Search เป็น Informed Search
+                          ใช้ heuristic คือ Manhattan Distance
+                          ร่วมกับ heapq เพื่อจัดลำดับการค้นหา
+                          ทำให้เลือกสำรวจ Node ที่มีแนวโน้มเข้าใกล้เป้าหมายก่อน</p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
-                          src="../picture/trackmaster/Track1.png"
+                          src="../picture/Maze Generating Algorithm/2.png"
+                          alt="Login"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--card2-->
+                <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
+                  <div class="card-body p-0">
+                    <div class="d-flex align-items-center">
+                      <div class="p-5 flex-grow-1">
+                        <div class="bg-light p-4 rounded-4 text-center text-lg-start">
+                          <h5 class="text-primary fw-bolder mb-2">Maze Example</h5>
+                          <p class="small text-muted mb-0">ในงานนี้เราใช้เขาวงกตเป็นตัวอย่าง
+                            ภาพที่เห็นคือเขาวงกตหลังจากทุบกำแพงเพิ่ม ซึ่งเราเรียกว่า Open Zone เส้นสีแดงที่เห็น คือเส้นทางที่สั้นที่สุด ซึ่งได้มาจากการ backtracking จากจุดหมายกลับไปยังจุดเริ่มต้น</p>
+                        </div>
+                      </div>
+                      <div class="flex-shrink-0 image-container">
+                        <img
+                          class="img-fluid rounded-3"
+                          src="../picture/Maze Generating Algorithm/3.png"
                           alt="Login"
                         />
                       </div>
@@ -79,45 +109,23 @@
                   </div>
                 </div>
 
-                <!--card2-->               
+                <!--card3-->               
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
                   <div class="card-body p-0">
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
-                          <h5 class="text-primary fw-bolder mb-2">Home</h5>
-                          <a href="https://www.youtube.com/@silkn4634" class="btn btn-danger btn-sm small fw-bolder" target="_blank">Link to my Youtube</a>
-                          <p class="small text-muted mb-0">I made it when I was a kid.</p>
+                          <h5 class="text-primary fw-bolder mb-2">Result Table</h5>
+                          <p class="small text-muted mb-0">-สถานการณ์ที่ 1 A* ชนะ BFS ทุกครั้งแต่จำนวน Node ที่ต่างกันยังไม่มากอยู่ประมาณ 0-18 เปอร์เซ็นต์
+                            <br>-สถานการณ์ที่ 2 หลัง Open Zone A* ชนะอย่างชัดเจนทุกครั้งลดจำนวน Node ได้ประมาณ 40-84 <br>เปอร์เซ็นต์จะแสดงให้เห็นถึงความแตกต่างด้านประสิทธิภาพอย่างชัดเจน
+                          </p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
-                          src="../picture/trackmaster/Track2.png"
+                          src="../picture/Maze Generating Algorithm/4.png"
                           alt="Home"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!--card3-->
-                <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
-                  <div class="card-body p-0">
-                    <div class="d-flex align-items-center">
-                      <div class="p-5 flex-grow-1">
-                        <div class="bg-light p-4 rounded-4 text-center text-lg-start">
-                          <h5 class="text-primary fw-bolder mb-2">User Interface</h5>
-                          <div class="small fw-bolder">Login</div>
-                          <p class="small text-muted mb-0">หากผู้ใช้ต้องการเข้าสู่ระบบโดยที่ยังไม่ได้ล็อกอิน ระบบจะแสดงหน้าต่าง pop up สำหรับการเข้าสู่ระบบโดยอัตโนมัติผู้ใช้สามารถเลือกเข้าสู่ระบบผ่านบัญชีGmail, Facebook หรือ Apple ID ได้หรือหากยังไม่มีบัญชีผู้ใช้งานสามารถลงทะเบียนผู้
-                          ใช้งาน (Sign up) เพื่อสมัครสมาชิก โดยระบบจะแสดงหน้าต่าง pop up สำหรับการกรอกข้อมูลสมัครใช้งานเว็บไซต์</p>
-                        </div>
-                      </div>
-                      <div class="flex-shrink-0 image-container">
-                        <img
-                          class="img-fluid rounded-3"
-                          src="../picture/trackmaster/Track1.png"
-                          alt="githubprofilepic1"
                         />
                       </div>
                     </div>
@@ -130,17 +138,110 @@
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
-                          <h5 class="text-primary fw-bolder mb-2">User Interface</h5>
-                          <div class="small fw-bolder">Login</div>
-                          <p class="small text-muted mb-0">หากผู้ใช้ต้องการเข้าสู่ระบบโดยที่ยังไม่ได้ล็อกอิน ระบบจะแสดงหน้าต่าง pop up สำหรับการเข้าสู่ระบบโดยอัตโนมัติผู้ใช้สามารถเลือกเข้าสู่ระบบผ่านบัญชีGmail, Facebook หรือ Apple ID ได้หรือหากยังไม่มีบัญชีผู้ใช้งานสามารถลงทะเบียนผู้
-                          ใช้งาน (Sign up) เพื่อสมัครสมาชิก โดยระบบจะแสดงหน้าต่าง pop up สำหรับการกรอกข้อมูลสมัครใช้งานเว็บไซต์</p>
+                          <h5 class="text-primary fw-bolder mb-2">Analysis</h5>
+                          <p class="small text-muted mb-0">ในเขาวงกตปกติเส้นทางถูกกำแพงบังคับแม้ A* จะรู้ว่าเป้าหมายอยู่ทิศไหนแต่ถ้าต้องเลี้ยวซ้ายก็ต้องเลี้ยวเหมือน BFS ทำให้ผลลัพธ์ใกล้เคียงกัน
+                            <br>แต่ใน Open Zone พื้นที่เปิดกว้าง heuristic สามารถชี้ทางได้แม่น A* จึงพุ่งเข้าใกล้เป้าหมายได้จริงขณะที่ BFS ยังต้องกระจายค้นหาเป็นวงกว้าง
+                          </p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
-                          src="../picture/trackmaster/Track1.png"
+                          src="../picture/Maze Generating Algorithm/5.png"
                           alt="githubprofilepic1"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--card5-->
+                <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
+                  <div class="card-body p-0">
+                    <div class="d-flex align-items-center">
+                      <div class="p-5 flex-grow-1">
+                        <div class="bg-light p-4 rounded-4 text-center text-lg-start">
+                          <h5 class="text-primary fw-bolder mb-2">Conclusion</h5>
+                          <p class="small text-muted mb-0">-A* ใช้ Node น้อยกว่า BFS ทุกกรณี
+                          <br>-Open Zone ทำให้ A* ใช้ heuristic ได้เต็มประสิทธิภาพ
+                          <br>-BFS เหมาะกับปัญหาที่ไม่ซับซ้อนหรือไม่มี heuristic
+                          <br>-A* เหมาะกับพื้นที่เปิดหรือมีหลายเส้นทาง
+                          <br>-ทั้งสองอัลกอริทึมสามารถหาเส้นทางที่ถูกต้องได้เหมือนกัน</p>
+                        </div>
+                      </div>
+                      <div class="flex-shrink-0 image-container">
+                        <img
+                          class="img-fluid rounded-3"
+                          src="../picture/Maze Generating Algorithm/6.png"
+                          alt="githubprofilepic1"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--card6-->               
+                <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
+                  <div class="card-body p-0">
+                    <div class="d-flex align-items-center">
+                      <div class="p-5 flex-grow-1">
+                        <div class="bg-light p-4 rounded-4 text-center text-lg-start">
+                          <h5 class="text-primary fw-bolder mb-2">Video Present</h5>
+                          <a href="https://youtu.be/ql8sInNJulQ" class="btn btn-danger btn-sm small fw-bolder" target="_blank">Link to my Youtube</a>
+                          <p class="small text-muted mb-0"></p>
+                        </div>
+                      </div>
+                      <div class="flex-shrink-0 image-container">
+                        <img
+                          class="img-fluid rounded-3"
+                          src="../picture/Maze Generating Algorithm/1.png"
+                          alt="Home"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--card7-->               
+                <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
+                  <div class="card-body p-0">
+                    <div class="d-flex align-items-center">
+                      <div class="p-5 flex-grow-1">
+                        <div class="bg-light p-4 rounded-4 text-center text-lg-start">
+                          <h5 class="text-primary fw-bolder mb-2">Video Code Review</h5>
+                          <a href="https://youtu.be/ZGHCoUY5xDM" class="btn btn-danger btn-sm small fw-bolder" target="_blank">Link to my Youtube</a>
+                          <p class="small text-muted mb-0"></p>
+                        </div>
+                      </div>
+                      <div class="flex-shrink-0 image-container">
+                        <img
+                          class="img-fluid rounded-3"
+                          src="../picture/Maze Generating Algorithm/8.png"
+                          alt="Home"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--card8-->               
+                <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
+                  <div class="card-body p-0">
+                    <div class="d-flex align-items-center">
+                      <div class="p-5 flex-grow-1">
+                        <div class="bg-light p-4 rounded-4 text-center text-lg-start">
+                          <h5 class="text-primary fw-bolder mb-2">IEEE Format</h5>
+                            <a href="https://github.com/Surabodee-Phasuk/Smash-the-Maze-with-Search-Algorithms-Comparison-BFS-VS-A-/blob/main/Cs373_Smash%20the%20Maze.pdf" class="btn btn-dark">
+                            Report (PDF)
+                            </a>
+                          <p class="small text-muted mb-0"></p>
+                        </div>
+                      </div>
+                      <div class="flex-shrink-0 image-container">
+                        <img
+                          class="img-fluid rounded-3"
+                          src="../picture/Maze Generating Algorithm/7.png"
+                          alt="Home"
                         />
                       </div>
                     </div>

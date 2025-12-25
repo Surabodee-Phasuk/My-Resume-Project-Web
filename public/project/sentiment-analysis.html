@@ -39,10 +39,10 @@
         <div class="container px-5 mb-5">
           <div class="text-center mb-5">
             <h1 class="display-5 fw-bolder mb-0">
-              <span class="text-gradient d-inline">Track Master</span>
+              <span class="text-gradient d-inline">Book Review Sentiment Analysis</span>
             </h1>
             <p class="lead text-muted mt-3">
-              Information & Contact Links
+              เป็นโมเดลที่ทำการเปรียบเทียบระหว่างการใช้ baseline และ LSTM มาวิเคราะห์รีวิวหนังสือจาก Amazon Kindle <br>โดยเรานำรีวิวทั้งหมดมากรองคำออกมาได้ 21,605 ประโยคแล้วแยกรีวิวเป็นเชิงบวก/ลบ และเป็นกลางโดยจะสรุปผลออกมาในรูปแบบกราฟ Lime
             </p>
           </div>
 
@@ -51,7 +51,8 @@
               <section>
                 <div class="d-flex align-items-center justify-content-between mb-4">
                   <h2 class="text-primary fw-bolder mb-0">Information</h2>
-                  <a class="btn btn-dark px-4 py-2" href="https://github.com/Jutinut/CS251FinalProject" target="_blank">
+                  
+                  <a class="btn btn-dark px-4 py-2" href="https://github.com/Surabodee-Phasuk/Book-Review-Sentiment-Analysis/tree/main" target="_blank">
                     <div class="d-inline-block bi bi-github me-2"></div>
                     GitHub
                   </a>
@@ -63,15 +64,14 @@
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
-                          <h5 class="text-primary fw-bolder mb-2">Login</h5>
-                          <p class="small text-muted mb-0">หากผู้ใช้ต้องการเข้าสู่ระบบโดยที่ยังไม่ได้ล็อกอิน ระบบจะแสดงหน้าต่าง pop up สำหรับการเข้าสู่ระบบโดยอัตโนมัติผู้ใช้สามารถเลือกเข้าสู่ระบบผ่านบัญชีGmail, Facebook หรือ Apple ID ได้หรือหากยังไม่มีบัญชีผู้ใช้งานสามารถลงทะเบียนผู้
-                          ใช้งาน (Sign up) เพื่อสมัครสมาชิก โดยระบบจะแสดงหน้าต่าง pop up สำหรับการกรอกข้อมูลสมัครใช้งานเว็บไซต์</p>
+                          <h5 class="text-primary fw-bolder mb-2">Preprocessing</h5>
+                          <p class="small text-muted mb-0">เริ่มที่การทำความสะอาดข้อมูล เช่นตัดรีวิวที่สั้นเกินไป มีค่าว่าง หรือ sentiment ที่ไม่ถูกต้องออกทำให้เหลือข้อมูลพร้อมใช้งานเพียง 21,684 แถว และสร้าง Input ในรูปแบบ aspect sentence เพื่อช่วยให้โมเดลรู้ว่าต้องวิเคราะห์เป็น Aspect(ด้าน)ใดๆ</p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
-                          src="../picture/trackmaster/Track1.png"
+                          src="../picture/Book Review Sentiment Analysis/1.png"
                           alt="Login"
                         />
                       </div>
@@ -85,15 +85,14 @@
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
-                          <h5 class="text-primary fw-bolder mb-2">Home</h5>
-                          <a href="https://www.youtube.com/@silkn4634" class="btn btn-danger btn-sm small fw-bolder" target="_blank">Link to my Youtube</a>
-                          <p class="small text-muted mb-0">I made it when I was a kid.</p>
+                          <h5 class="text-primary fw-bolder mb-2">LSTM Model</h5>
+                          <p class="small text-muted mb-0">โดยโมเดลหลักของเราคือ Bidirectional LSTM เพื่อให้เข้าใจบริบทของประโยค และเพิ่ม Class Weights ให้ Neutral และ Negative เพื่อแก้ปัญหาข้อมูลไม่สมดุล โดยได้ค่า Accuracy ที่67%</p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
-                          src="../picture/trackmaster/Track2.png"
+                          src="../picture/Book Review Sentiment Analysis/2.png"
                           alt="Home"
                         />
                       </div>
@@ -107,16 +106,14 @@
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
-                          <h5 class="text-primary fw-bolder mb-2">User Interface</h5>
-                          <div class="small fw-bolder">Login</div>
-                          <p class="small text-muted mb-0">หากผู้ใช้ต้องการเข้าสู่ระบบโดยที่ยังไม่ได้ล็อกอิน ระบบจะแสดงหน้าต่าง pop up สำหรับการเข้าสู่ระบบโดยอัตโนมัติผู้ใช้สามารถเลือกเข้าสู่ระบบผ่านบัญชีGmail, Facebook หรือ Apple ID ได้หรือหากยังไม่มีบัญชีผู้ใช้งานสามารถลงทะเบียนผู้
-                          ใช้งาน (Sign up) เพื่อสมัครสมาชิก โดยระบบจะแสดงหน้าต่าง pop up สำหรับการกรอกข้อมูลสมัครใช้งานเว็บไซต์</p>
+                          <h5 class="text-primary fw-bolder mb-2">Baseline Model</h5>
+                          <p class="small text-muted mb-0">Baseline ของเราคือ TF-IDF + Logistic Regression เป็นโมเดลง่ายแต่มีประสิทธิภาพดีมาก และให้ Accuracy สูงที่สุดในโปรเจกต์ที่ 68% ซึ่งจะแสดงให้เห็นว่าแม้ Logistic Regression จะได้ความแม่นยำที่สูงกว่าเล็กน้อย แต่ Bi-LSTM จะมีความสามารถเชิงเข้าใจบริบทที่ละเอียดกว่า โดยเฉพาะในประโยคที่มี Sentiment ผสมกัน</p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
-                          src="../picture/trackmaster/Track1.png"
+                          src="../picture/Book Review Sentiment Analysis/3.png"
                           alt="githubprofilepic1"
                         />
                       </div>
@@ -130,17 +127,125 @@
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
-                          <h5 class="text-primary fw-bolder mb-2">User Interface</h5>
-                          <div class="small fw-bolder">Login</div>
-                          <p class="small text-muted mb-0">หากผู้ใช้ต้องการเข้าสู่ระบบโดยที่ยังไม่ได้ล็อกอิน ระบบจะแสดงหน้าต่าง pop up สำหรับการเข้าสู่ระบบโดยอัตโนมัติผู้ใช้สามารถเลือกเข้าสู่ระบบผ่านบัญชีGmail, Facebook หรือ Apple ID ได้หรือหากยังไม่มีบัญชีผู้ใช้งานสามารถลงทะเบียนผู้
-                          ใช้งาน (Sign up) เพื่อสมัครสมาชิก โดยระบบจะแสดงหน้าต่าง pop up สำหรับการกรอกข้อมูลสมัครใช้งานเว็บไซต์</p>
+                          <h5 class="text-primary fw-bolder mb-2">Case 1-3</h5>
+                          <p class="small text-muted mb-0">โดย 3 เคสแรกเป็นประโยคที่มี Sentiment ตรงกัน โดยในเคสที่มีผลไม่ขัดแย้งกันได้ผลเป็นทั้งสองโมเดลทำถูก 100% ไม่มีปัญหา แสดงว่าโมเดลจับคำสำคัญ เช่น amazing หรือ terrible ได้ดี แต่ LSTM ให้คะแนนความมั่นใจสูงกว่าอย่างเห็นได้ชัด</p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
-                          src="../picture/trackmaster/Track1.png"
+                          src="../picture/Book Review Sentiment Analysis/4.png"
                           alt="githubprofilepic1"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--card5-->
+                <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
+                  <div class="card-body p-0">
+                    <div class="d-flex align-items-center">
+                      <div class="p-5 flex-grow-1">
+                        <div class="bg-light p-4 rounded-4 text-center text-lg-start">
+                          <h5 class="text-primary fw-bolder mb-2">Case 4</h5>
+                          <p class="small text-muted mb-0">ในเคสที่ขัดแย้งกัน sentence โมเดล Baseline จะผิดทั้งหมด เพราะเวลามีทั้งคำบวกและลบ จะเฉลี่ยออกมากลายเป็น Neutral ส่วน LSTM แม้ไม่ได้ถูกทั้งหมด แต่สามารถจับคู่คำว่า amazing กับ plot ได้ถูกต้อง ถือว่าความเข้าใจเชิงบริบทดีกว่าbaseline</p>
+                        </div>
+                      </div>
+                      <div class="flex-shrink-0 image-container">
+                        <img
+                          class="img-fluid rounded-3"
+                          src="../picture/Book Review Sentiment Analysis/5.png"
+                          alt="githubprofilepic1"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--card6-->
+                <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
+                  <div class="card-body p-0">
+                    <div class="d-flex align-items-center">
+                      <div class="p-5 flex-grow-1">
+                        <div class="bg-light p-4 rounded-4 text-center text-lg-start">
+                          <h5 class="text-primary fw-bolder mb-2">Conclusion</h5>
+                          <p class="small text-muted mb-0">จะพบว่าคำว่า amazing และ boring มีผลต่อผลลัพธ์ชัดเจน แต่ LSTM ยังติด bias จากคำ positive ที่อยู่ต้นประโยค ทำให้บางครั้งทายผิดครับ สรุปคือ แม้ Logistic Regression จะให้ Accuracy สูงกว่า 1% แต่ Bi-LSTM เหมาะสมกว่าในการทำ ABSA เพราะเข้าใจคำเชื่อม ความสัมพันธ์ระยะไกล และแยกแยะประโยคที่ซับซ้อนมากกว่า</p>
+                        </div>
+                      </div>
+                      <div class="flex-shrink-0 image-container">
+                        <img
+                          class="img-fluid rounded-3"
+                          src="../picture/Book Review Sentiment Analysis/6.png"
+                          alt="githubprofilepic1"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--card7-->               
+                <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
+                  <div class="card-body p-0">
+                    <div class="d-flex align-items-center">
+                      <div class="p-5 flex-grow-1">
+                        <div class="bg-light p-4 rounded-4 text-center text-lg-start">
+                          <h5 class="text-primary fw-bolder mb-2">Video Present</h5>
+                          <a href="https://youtu.be/InSy8KSuxpY" class="btn btn-danger btn-sm small fw-bolder" target="_blank">Link to my Youtube</a>
+                          <p class="small text-muted mb-0"></p>
+                        </div>
+                      </div>
+                      <div class="flex-shrink-0 image-container">
+                        <img
+                          class="img-fluid rounded-3"
+                          src="../picture/Book Review Sentiment Analysis/0.png"
+                          alt="Home"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--card8-->               
+                <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
+                  <div class="card-body p-0">
+                    <div class="d-flex align-items-center">
+                      <div class="p-5 flex-grow-1">
+                        <div class="bg-light p-4 rounded-4 text-center text-lg-start">
+                          <h5 class="text-primary fw-bolder mb-2">Video Code Review</h5>
+                          <a href="https://youtu.be/Ue0YDMatWmY" class="btn btn-danger btn-sm small fw-bolder" target="_blank">Link to my Youtube</a>
+                          <p class="small text-muted mb-0"></p>
+                        </div>
+                      </div>
+                      <div class="flex-shrink-0 image-container">
+                        <img
+                          class="img-fluid rounded-3"
+                          src="../picture/Book Review Sentiment Analysis/8.png"
+                          alt="Home"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--card9-->               
+                <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
+                  <div class="card-body p-0">
+                    <div class="d-flex align-items-center">
+                      <div class="p-5 flex-grow-1">
+                        <div class="bg-light p-4 rounded-4 text-center text-lg-start">
+                          <h5 class="text-primary fw-bolder mb-2">IEEE Format</h5>
+                            <a href="https://github.com/Surabodee-Phasuk/Book-Review-Sentiment-Analysis/blob/main/cs374_NLP_BookSentiment%20Analysis.pdf" class="btn btn-dark">
+                            Report (PDF)
+                            </a>
+                          <p class="small text-muted mb-0"></p>
+                        </div>
+                      </div>
+                      <div class="flex-shrink-0 image-container">
+                        <img
+                          class="img-fluid rounded-3"
+                          src="../picture/Book Review Sentiment Analysis/7.png"
+                          alt="Home"
                         />
                       </div>
                     </div>

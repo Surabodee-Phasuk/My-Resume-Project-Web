@@ -39,10 +39,12 @@
         <div class="container px-5 mb-5">
           <div class="text-center mb-5">
             <h1 class="display-5 fw-bolder mb-0">
-              <span class="text-gradient d-inline">Track Master</span>
+              <span class="text-gradient d-inline">MuKrathaMaster</span>
             </h1>
             <p class="lead text-muted mt-3">
-              Information & Contact Links
+              เกมแนวจำลองสถานการณ์ (Simulation Game) บรรยากาศของการปิ้งหมูกระทะแบบไทย<br>
+              โดยผู้เล่นต้องเลือกวัตถุดิบนำไปปิ้งบนเตาและเสิร์ฟให้ถูกจังหวะเพื่อเก็บคะแนนและค่าความสุข (Happiness) ตามระดับความสุก
+
             </p>
           </div>
 
@@ -51,7 +53,7 @@
               <section>
                 <div class="d-flex align-items-center justify-content-between mb-4">
                   <h2 class="text-primary fw-bolder mb-0">Information</h2>
-                  <a class="btn btn-dark px-4 py-2" href="https://github.com/Jutinut/CS251FinalProject" target="_blank">
+                  <a class="btn btn-dark px-4 py-2" href="https://github.com/Jutinut-BBBOMB/CS364-MuKrathaMaster" target="_blank">
                     <div class="d-inline-block bi bi-github me-2"></div>
                     GitHub
                   </a>
@@ -63,16 +65,19 @@
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
-                          <h5 class="text-primary fw-bolder mb-2">Login</h5>
-                          <p class="small text-muted mb-0">หากผู้ใช้ต้องการเข้าสู่ระบบโดยที่ยังไม่ได้ล็อกอิน ระบบจะแสดงหน้าต่าง pop up สำหรับการเข้าสู่ระบบโดยอัตโนมัติผู้ใช้สามารถเลือกเข้าสู่ระบบผ่านบัญชีGmail, Facebook หรือ Apple ID ได้หรือหากยังไม่มีบัญชีผู้ใช้งานสามารถลงทะเบียนผู้
-                          ใช้งาน (Sign up) เพื่อสมัครสมาชิก โดยระบบจะแสดงหน้าต่าง pop up สำหรับการกรอกข้อมูลสมัครใช้งานเว็บไซต์</p>
+                          <h5 class="text-primary fw-bolder mb-2">Main Menu</h5>
+                          <p class="small text-muted mb-0">ประกอบไปด้วย 3 องค์ประกอบ พื้นหลัง, โลโก้เกม, แสดงชื่อเกม และแสดงปุ่มหลัก 3 ปุ่ม โดยปุ่มจะเปลี่ยนไปตามภาษาเครื่องรองรับไทยและอังกฤษ<br>
+🔴 “เริ่มเกมใหม่ / START” → เข้าสู่หน้าเล่นเกม<br>
+🟢 “เล่นต่อ / RESUME” → โหลดเกมที่ค้างไว้(เล่นต่อจะสามารถกดเล่นได้เมื่อมีข้อมูลเดิมที่เล่นค้างไว้)<br>
+🔵 “ดูประวัติ / HISTORY” → ดูคะแนนสูงสุดที่เคยทำได้
+</p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
-                          src="../picture/trackmaster/Track1.png"
-                          alt="Login"
+                          src="../picture/MuKrathaMaster/1.png"
+                          alt="home"
                         />
                       </div>
                     </div>
@@ -85,16 +90,17 @@
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
-                          <h5 class="text-primary fw-bolder mb-2">Home</h5>
-                          <a href="https://www.youtube.com/@silkn4634" class="btn btn-danger btn-sm small fw-bolder" target="_blank">Link to my Youtube</a>
-                          <p class="small text-muted mb-0">I made it when I was a kid.</p>
+                          <h5 class="text-primary fw-bolder mb-2">Game Screen</h5>
+                          <p class="small text-muted mb-0">-วัตถุดิบแต่ละชิ้นจะมี “State ความสุก” และ “คะแนน” ที่แตกต่างกัน
+                        และผู้เล่นต้องแตะที่วัตถุดิบเพื่อวาง และแตะอีกครั้งเพื่อเสิร์ฟ<br>
+                        -องค์ประกอบของหน้าการเล่นเกมตัวแสดงคะแนนปัจจุบัน (Score)ปุ่ม Pauseกระทะหมูกระทะ พร้อมตำแหน่งสำหรับวางวัตถุดิบแถบเลือกวัตถุดิบด้านล่าง</p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
-                          src="../picture/trackmaster/Track2.png"
-                          alt="Home"
+                          src="../picture/MuKrathaMaster/2.png"
+                          alt="Game"
                         />
                       </div>
                     </div>
@@ -107,16 +113,16 @@
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
-                          <h5 class="text-primary fw-bolder mb-2">User Interface</h5>
-                          <div class="small fw-bolder">Login</div>
-                          <p class="small text-muted mb-0">หากผู้ใช้ต้องการเข้าสู่ระบบโดยที่ยังไม่ได้ล็อกอิน ระบบจะแสดงหน้าต่าง pop up สำหรับการเข้าสู่ระบบโดยอัตโนมัติผู้ใช้สามารถเลือกเข้าสู่ระบบผ่านบัญชีGmail, Facebook หรือ Apple ID ได้หรือหากยังไม่มีบัญชีผู้ใช้งานสามารถลงทะเบียนผู้
-                          ใช้งาน (Sign up) เพื่อสมัครสมาชิก โดยระบบจะแสดงหน้าต่าง pop up สำหรับการกรอกข้อมูลสมัครใช้งานเว็บไซต์</p>
+                          <h5 class="text-primary fw-bolder mb-2">State System</h5>
+                          <p class="small text-muted mb-0">🐷 หมู และ ไก่ (3 State) <br>ดิบ → Well Done → Burntเวลาข้าม state: 3 วินาที
+                            <br>🥩 เนื้อ (4 State) <br>ดิบ → Medium Rare → Well Done → Burnt เวลาข้าม state: 3 วินาที
+                          </p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
-                          src="../picture/trackmaster/Track1.png"
+                          src="../picture/MuKrathaMaster/6.png"
                           alt="githubprofilepic1"
                         />
                       </div>
@@ -130,16 +136,67 @@
                     <div class="d-flex align-items-center">
                       <div class="p-5 flex-grow-1">
                         <div class="bg-light p-4 rounded-4 text-center text-lg-start">
-                          <h5 class="text-primary fw-bolder mb-2">User Interface</h5>
-                          <div class="small fw-bolder">Login</div>
-                          <p class="small text-muted mb-0">หากผู้ใช้ต้องการเข้าสู่ระบบโดยที่ยังไม่ได้ล็อกอิน ระบบจะแสดงหน้าต่าง pop up สำหรับการเข้าสู่ระบบโดยอัตโนมัติผู้ใช้สามารถเลือกเข้าสู่ระบบผ่านบัญชีGmail, Facebook หรือ Apple ID ได้หรือหากยังไม่มีบัญชีผู้ใช้งานสามารถลงทะเบียนผู้
-                          ใช้งาน (Sign up) เพื่อสมัครสมาชิก โดยระบบจะแสดงหน้าต่าง pop up สำหรับการกรอกข้อมูลสมัครใช้งานเว็บไซต์</p>
+                          <h5 class="text-primary fw-bolder mb-2">Pause Screen</h5>
+                          <p class="small text-muted mb-0">หน้าพักจะแสดงเมื่อผู้เล่นกดปุ่ม Pause หรือออกจากแอปชั่วคราวมีปุ่มให้เลือกดังนี้
+                          <br>🟢“เล่นต่อ / RESUME” → เล่นเกมต่อจากที่พักไว้หน้าเล่นเกม
+                          <br>🔴 “ยอมแพ้ / Restart” → ยอมแพ้และเริ่มใหม่
+                          <br>🔵 “พักเกม / Exit” → ออกเกมที่กำลังเล่นอยู่ กลับไปหน้าหลัก</p>
                         </div>
                       </div>
                       <div class="flex-shrink-0 image-container">
                         <img
                           class="img-fluid rounded-3"
-                          src="../picture/trackmaster/Track1.png"
+                          src="../picture/MuKrathaMaster/3.png"
+                          alt="githubprofilepic1"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--card5-->
+                <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
+                  <div class="card-body p-0">
+                    <div class="d-flex align-items-center">
+                      <div class="p-5 flex-grow-1">
+                        <div class="bg-light p-4 rounded-4 text-center text-lg-start">
+                          <h5 class="text-primary fw-bolder mb-2">Result Screen</h5>
+                          <p class="small text-muted mb-0">เมื่อจบรอบ ระบบแสดงผลดังนี้
+                          <br>-จำนวนที่เสิร์ฟ
+                          <br>-คะแนนรวม
+                          <br>-คะแนนสูงสุด
+                          <br>-คะแนนความสุข
+                          <br>-จำนวนที่ไหม้</p>
+                        </div>
+                      </div>
+                      <div class="flex-shrink-0 image-container">
+                        <img
+                          class="img-fluid rounded-3"
+                          src="../picture/MuKrathaMaster/4.png"
+                          alt="githubprofilepic1"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--card6-->
+                <div class="card overflow-hidden shadow rounded-4 border-0 mb-4">
+                  <div class="card-body p-0">
+                    <div class="d-flex align-items-center">
+                      <div class="p-5 flex-grow-1">
+                        <div class="bg-light p-4 rounded-4 text-center text-lg-start">
+                          <h5 class="text-primary fw-bolder mb-2">History Screen</h5>
+                          <p class="small text-muted mb-0">เมื่อกดปุ่มดูประวัติ จะแสดงผลดังนี้คะแนนสูงสุดที่เคยทำไว้
+                          <br>สถิติล่าสุด 
+                          <br>คะแนนล่าสุด
+                          <br>จำนวนเนื้อที่ปิ้งไปทั้งหมด</p>
+                        </div>
+                      </div>
+                      <div class="flex-shrink-0 image-container">
+                        <img
+                          class="img-fluid rounded-3"
+                          src="../picture/MuKrathaMaster/5.png"
                           alt="githubprofilepic1"
                         />
                       </div>
